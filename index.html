@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bapela Digital Systems | Next-Gen Web Solutions</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --brand: #2abfb0;
+      --brand-glow: rgba(42, 191, 176, 0.25);
+      --bg: #0a0c10;
+      --card: #151921;
+      --text: #ffffff;
+      --sub: #94a3b8;
+      --border: rgba(255, 255, 255, 0.08);
+      --radius: 24px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Navigation */
+    header { background: rgba(10, 12, 16, 0.9); backdrop-filter: blur(12px); padding: 1.2rem 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; color: #fff; text-decoration: none; }
+    .logo span { color: var(--brand); }
+
+    /* Hero */
+    .hero { padding: 8rem 0 5rem; text-align: center; }
+    .status-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(42, 191, 176, 0.1); padding: 8px 16px; border-radius: 100px; border: 1px solid var(--brand-glow); font-size: 0.7rem; font-weight: 700; color: var(--brand); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 8vw, 4.2rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
+    .hero h1 span { color: var(--brand); text-shadow: 0 0 30px var(--brand-glow); }
+    .hero p { color: var(--sub); font-size: 1.1rem; max-width: 600px; margin: 0 auto 3rem; }
+
+    /* Grids & Cards */
+    section { padding: 6rem 0; }
+    .section-head { text-align: center; margin-bottom: 4rem; }
+    .section-head h2 { font-family: 'Syne', sans-serif; font-size: 2.2rem; margin-bottom: 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--card); padding: 2.5rem; border-radius: var(--radius); border: 1px solid var(--border); transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+    .card:hover { border-color: var(--brand); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+    /* Tech Stack Icons */
+    .tech-icons { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; opacity: 0.5; filter: grayscale(1); margin-top: 2rem; }
+    .tech-icons i, .tech-icons span { font-size: 2rem; transition: 0.3s; }
+    .tech-icons i:hover, .tech-icons span:hover { opacity: 1; filter: grayscale(0); color: var(--brand); }
+
+    /* Pricing & Lists */
+    .price { font-size: 2.5rem; font-weight: 800; margin: 1rem 0; color: #fff; }
+    .price span { font-size: 1rem; color: var(--sub); }
+    .check-list { list-style: none; margin-top: 1.5rem; }
+    .check-list li { margin-bottom: 0.8rem; font-size: 0.9rem; color: var(--sub); display: flex; align-items: center; gap: 10px; }
+    .check-list i { color: var(--brand); }
+
+    /* FAQ List */
+    .faq-item { margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+    .faq-item h4 { color: var(--brand); margin-bottom: 0.5rem; font-family: 'Syne'; }
+    .faq-item p { font-size: 0.95rem; color: var(--sub); }
+
+    /* Buttons */
+    .btn { background: var(--brand); color: #000; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 10px; border: none; cursor: pointer; transition: 0.3s; }
+    .btn:hover { background: #fff; transform: scale(1.05); }
+
+    /* Form */
+    .form-wrap { background: var(--card); padding: 3rem; border-radius: var(--radius); border: 1px solid var(--border); max-width: 600px; margin: 0 auto; }
+    input, select, textarea { width: 100%; background: #0a0c10; border: 1px solid var(--border); padding: 1rem; border-radius: 12px; color: #fff; margin-bottom: 1rem; font-family: inherit; }
+
+    /* Footer & Float */
+    footer { padding: 4rem 0; border-top: 1px solid var(--border); text-align: center; color: var(--sub); font-size: 0.85rem; }
+    .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; color: white; font-size: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); z-index: 1001; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="#" class="logo">Bapela <span>Digital</span></a>
+    <a href="#contact" class="btn" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">Request Quote</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="status-badge"><i class="fas fa-bolt"></i> ACCEPTING NEW CLIENTS</div>
+    <h1>High-Performance Web <span>Systems</span>.</h1>
+    <p>We build scalable digital infrastructure and automated systems for businesses ready to dominate their market.</p>
+    <a href="#cases" class="btn">View Case Studies <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<section style="padding: 2rem 0; background: rgba(255,255,255,0.01);">
+  <div class="container">
+    <div class="tech-icons">
+      <i class="fab fa-html5"></i>
+      <i class="fab fa-css3-alt"></i>
+      <i class="fab fa-js"></i>
+      <i class="fab fa-node-js"></i>
+      <span style="font-family: 'Syne'; font-weight: 800;">C#</span>
+      <i class="fas fa-database"></i>
+      <i class="fab fa-git-alt"></i>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="container">
+    <div class="section-head">
+      <h2>Proven Solutions</h2>
+      <p>Technical logic built for business growth.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">NMU Logistics</span>
+        <h3 style="margin-top: 0.5rem;">LiteBite Orders</h3>
+        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">Full-stack ordering system featuring automated WhatsApp receipts, student-specific residence logic, and dynamic menu cutoffs.</p>
+      </div>
+      <div class="card">
+        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">Service Industry</span>
+        <h3 style="margin-top: 0.5rem;">Boikago Cleaning</h3>
+        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">Automated booking funnel built to eliminate manual admin, collect deposits securely, and professionalize brand positioning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="background: rgba(42, 191, 176, 0.02);">
+  <div class="container">
+    <div class="section-head">
+      <h2>Investment Packages</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h4>STARTER</h4>
+        <div class="price">R2,500 <span>+</span></div>
+        <ul class="check-list">
+          <li><i class="fas fa-check"></i> 1-5 Custom Pages</li>
+          <li><i class="fas fa-check"></i> WhatsApp Integration</li>
+          <li><i class="fas fa-check"></i> Google Maps SEO</li>
+          <li><i class="fas fa-check"></i> Standard Hosting Setup</li>
+        </ul>
+      </div>
+      <div class="card" style="border-color: var(--brand); transform: scale(1.05);">
+        <h4>BUSINESS</h4>
+        <div class="price">R5,000 <span>+</span></div>
+        <ul class="check-list">
+          <li><i class="fas fa-check"></i> Advanced Automation</li>
+          <li><i class="fas fa-check"></i> Professional Business Email</li>
+          <li><i class="fas fa-check"></i> Ordering/Booking System</li>
+          <li><i class="fas fa-check"></i> 3 Months Maintenance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container" style="max-width: 800px;">
+    <div class="section-head">
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq-item">
+      <h4>How does the deposit work?</h4>
+      <p>We follow a 50/50 model. A 50% commencement fee secures your project on our dev calendar, and the balance is paid once you are satisfied and ready to launch.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can you build custom features?</h4>
+      <p>Absolutely. As software developers, we don't rely on basic builders. We can code custom logic for orders, bookings, and complex data tracking.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="form-wrap">
+      <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Syne';">Start Your Project</h2>
+      <input type="text" id="name" placeholder="Business Name">
+      <input type="tel" id="phone" placeholder="WhatsApp Number">
+      <select id="package">
+        <option>Starter Package (R2,500+)</option>
+        <option>Business System (R5,000+)</option>
+        <option>Custom Development</option>
+      </select>
+      <textarea id="msg" rows="4" placeholder="Tell us about your requirements..."></textarea>
+      <button class="btn" style="width: 100%; justify-content: center;" onclick="sendToWA()">Send Inquiry <i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>Bapela Digital Systems</strong></p>
+    <p style="margin-top: 10px;">Official Domain: <a href="https://bapeladigital.co.za" style="color: var(--brand); text-decoration: none;">bapeladigital.co.za</a></p>
+    <p style="opacity: 0.5; margin-top: 20px;">© 2026 | SOFTWARE DEVELOPMENT & DIGITAL INFRASTRUCTURE</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/27732221876" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+  function sendToWA() {
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const pkg = document.getElementById('package').value;
+    const msg = document.getElementById('msg').value;
+
+    if(!name || !phone) return alert('Please provide your name and number.');
+
+    const text = `*New Bapela Digital Inquiry*%0A%0A*Business:* ${name}%0A*WhatsApp:* ${phone}%0A*Package:* ${pkg}%0A*Message:* ${msg}`;
+    window.open(`https://wa.me/27732221876?text=${text}`, '_blank');
+  }
+</script>
+
+</body>
+</html>
