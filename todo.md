@@ -14,4 +14,4 @@
 - [x] Add a truthful owner and client-journey section that explains how enquiries, quotes, build, review, and launch work.
 - [x] Expand the real project cards into concise, factual case studies without fabricated reviews or results.
 - [x] Create and install a dedicated Bapela browser-tab/search icon and supporting metadata.
-- [ ] Judge the revised live site, fix material issues, and verify the published experience.
+- [x] Judge the revised live site, fix material issues, and verify the published experience.
