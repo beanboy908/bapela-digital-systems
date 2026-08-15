@@ -29,5 +29,5 @@
 - [x] Add a polished Explore Bapela navigation with clear Services, Projects, and About Lucky destinations.
 - [x] Verify the Explore Bapela navigation works cleanly on live desktop and phone-sized layouts.
 - [x] Replace the oversized sticky text navigation with a compact three-line hamburger menu on the homepage and About Lucky page.
-- [ ] Verify the hamburger menu opens, closes, and routes correctly on live desktop and phone-sized layouts.
+- [x] Verify the hamburger menu opens, closes, and routes correctly on live desktop and phone-sized layouts.
 - [x] Remove student, year, and university wording so the founder section presents Lucky Malaka only as Bapela Digital Systems founder.
