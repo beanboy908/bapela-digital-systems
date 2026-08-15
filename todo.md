@@ -17,4 +17,4 @@
 - [x] Judge the revised live site, fix material issues, and verify the published experience.
 - [x] Add Lucky Malaka’s supplied photo and genuine founder identity to the Bapela about section.
 - [x] Add the supplied Bapela Digital logo to the live site and align the browser-tab icon with it.
-- [ ] Verify the published founder and logo presentation across the live site.
+- [x] Verify the published founder and logo presentation across the live site.
