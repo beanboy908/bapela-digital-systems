@@ -15,16 +15,16 @@
   
   <style>
     :root {
-      --brand: #007f73;
-      --brand-strong: #00645a;
-      --brand-on-dark: #7ee0d2;
-      --brand-glow: rgba(0, 127, 115, 0.16);
-      --ink: #183b36;
+      --brand: #1e5ed8;
+      --brand-strong: #1748a5;
+      --brand-on-dark: #a8c5ff;
+      --brand-glow: rgba(30, 94, 216, 0.16);
+      --ink: #202124;
       --bg: #f7f4ee;
       --card: #ffffff;
-      --text: #21332f;
-      --sub: #5d6e68;
-      --border: #d9e3de;
+      --text: #292c33;
+      --sub: #606671;
+      --border: #dfe4ed;
       --radius: 24px;
     }
 
@@ -43,8 +43,8 @@
     .header-nav a:hover { color: var(--brand-strong); }
 
     /* Hero */
-    .hero { padding: 8rem 0 5rem; text-align: center; background: linear-gradient(135deg, #f7f4ee 0%, #eef7f2 55%, #dfeee7 100%); }
-    .status-badge { display: inline-flex; align-items: center; gap: 8px; background: #dff3eb; padding: 8px 16px; border-radius: 100px; border: 1px solid #b9ded3; font-size: 0.7rem; font-weight: 700; color: var(--brand-strong); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px; }
+    .hero { padding: 8rem 0 5rem; text-align: center; background: linear-gradient(135deg, #f7f4ee 0%, #f1f5ff 55%, #e3edff 100%); }
+    .status-badge { display: inline-flex; align-items: center; gap: 8px; background: #e7efff; padding: 8px 16px; border-radius: 100px; border: 1px solid #c9dcff; font-size: 0.7rem; font-weight: 700; color: var(--brand-strong); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px; }
     .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 8vw, 4.2rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; color: var(--ink); }
     .hero h1 span { color: var(--brand); text-shadow: 0 0 30px var(--brand-glow); }
     .hero p { color: var(--sub); font-size: 1.1rem; max-width: 600px; margin: 0 auto 3rem; }
@@ -58,8 +58,8 @@
     .section-head h2 { font-family: 'Syne', sans-serif; font-size: 2.2rem; margin-bottom: 1rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
     #cases .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .card { background: var(--card); padding: 2.5rem; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: 0 14px 34px rgba(24, 59, 54, 0.07); transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
-    .card:hover { border-color: #8dcdbf; transform: translateY(-10px); box-shadow: 0 20px 40px rgba(24, 59, 54, 0.13); }
+    .card { background: var(--card); padding: 2.5rem; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: 0 14px 34px rgba(32, 33, 36, 0.07); transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+    .card:hover { border-color: #a7c2f5; transform: translateY(-10px); box-shadow: 0 20px 40px rgba(32, 33, 36, 0.13); }
     .project-card { color: inherit; }
     .project-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; margin-bottom: 1.25rem; }
     .project-thumb { display: block; border-radius: 14px; }
@@ -74,20 +74,27 @@
     /* Services, process and credibility */
     .proof-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .proof-item { display: flex; gap: 0.75rem; align-items: center; color: var(--ink); font-size: 0.9rem; font-weight: 700; }
-    .proof-item i { width: 2.1rem; height: 2.1rem; display: grid; place-items: center; border-radius: 50%; background: #dff3eb; color: var(--brand-strong); }
+    .proof-item i { width: 2.1rem; height: 2.1rem; display: grid; place-items: center; border-radius: 50%; background: #e7efff; color: var(--brand-strong); }
     .service-card { min-height: 100%; }
-    .service-icon { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 14px; background: #dff3eb; color: var(--brand-strong); font-size: 1.2rem; margin-bottom: 1.4rem; }
+    .service-icon { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 14px; background: #e7efff; color: var(--brand-strong); font-size: 1.2rem; margin-bottom: 1.4rem; }
     .service-card h3 { font-family: 'Syne', sans-serif; font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--ink); }
     .service-card p { color: var(--sub); font-size: 0.94rem; }
     .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-    .step { position: relative; padding: 1.5rem; border-left: 2px solid #9bcfc3; }
+    .step { position: relative; padding: 1.5rem; border-left: 2px solid #aac4f4; }
     .step-number { display: block; color: var(--brand); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 0.7rem; }
     .step h3 { color: var(--ink); font-family: 'Syne', sans-serif; font-size: 1rem; margin-bottom: 0.5rem; }
     .step p { color: var(--sub); font-size: 0.87rem; }
-    .about-shell { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 2rem; align-items: start; background: var(--ink); border-radius: var(--radius); padding: 3rem; }
+    .about-shell { display: grid; grid-template-columns: minmax(220px, 0.62fr) minmax(0, 1.38fr); gap: 2rem; align-items: start; background: var(--ink); border-radius: var(--radius); padding: 2rem; }
     .about-kicker { color: var(--brand-on-dark); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
     .about-shell h2 { color: #ffffff; font-family: 'Syne', sans-serif; font-size: 2.1rem; line-height: 1.15; margin-top: 0.75rem; }
     .about-shell p { color: #d6e4df; margin-bottom: 1rem; }
+    .founder-portrait { background: #121316; border-radius: 18px; padding: 0.5rem; }
+    .founder-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: contain; border-radius: 13px; }
+    .brand-stamp { display: inline-flex; max-width: 210px; padding: 0.55rem; margin-bottom: 1.25rem; background: #ffffff; border-radius: 12px; }
+    .brand-stamp img { display: block; width: 100%; border-radius: 8px; }
+    .founder-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.25rem 0 1.5rem; }
+    .founder-meta span { color: #e4ebf8; border: 1px solid rgba(168, 197, 255, 0.35); border-radius: 100px; padding: 0.5rem 0.75rem; font-size: 0.78rem; }
+    .founder-meta i { color: var(--brand-on-dark); margin-right: 0.4rem; }
     .case-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.25rem; }
     .case-fact { padding-top: 0.75rem; border-top: 1px solid var(--border); color: var(--sub); font-size: 0.82rem; }
     .case-fact strong { display: block; color: var(--ink); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
@@ -109,17 +116,17 @@
 
     /* Form */
     .form-wrap { background: var(--card); padding: 3rem; border-radius: var(--radius); border: 1px solid var(--border); max-width: 600px; margin: 0 auto; }
-    input, select, textarea { width: 100%; background: #f8fbf9; border: 1px solid #c7d8d1; padding: 1rem; border-radius: 12px; color: var(--text); margin-bottom: 1rem; font-family: inherit; }
+    input, select, textarea { width: 100%; background: #f8faff; border: 1px solid #cbd7ed; padding: 1rem; border-radius: 12px; color: var(--text); margin-bottom: 1rem; font-family: inherit; }
     .contact-intro { max-width: 600px; text-align: center; color: var(--sub); margin: -0.75rem auto 2rem; }
     .contact-meta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; color: var(--sub); font-size: 0.82rem; margin-top: 1.25rem; }
     .contact-meta a { color: var(--brand-strong); font-weight: 800; text-decoration: none; }
 
-    .btn { background: var(--brand); color: #ffffff; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 10px; border: none; cursor: pointer; transition: 0.3s; box-shadow: 0 8px 18px rgba(0, 127, 115, 0.2); }
+    .btn { background: var(--brand); color: #ffffff; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 10px; border: none; cursor: pointer; transition: 0.3s; box-shadow: 0 8px 18px rgba(30, 94, 216, 0.2); }
     .btn:hover { background: var(--brand-strong); transform: translateY(-2px); }
     
     /* Footer & Float */
-    footer { padding: 4rem 0; background: var(--ink); border-top: 1px solid #12312c; text-align: center; color: #d6e4df; font-size: 0.85rem; }
-    .wa-float { position: fixed; bottom: 30px; right: 20px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; color: white; font-size: 30px; box-shadow: 0 10px 20px rgba(24,59,54,0.25); z-index: 1001; text-decoration: none; }
+    footer { padding: 4rem 0; background: var(--ink); border-top: 1px solid #0f1012; text-align: center; color: #dfe6f3; font-size: 0.85rem; }
+    .wa-float { position: fixed; bottom: 30px; right: 20px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; color: white; font-size: 30px; box-shadow: 0 10px 20px rgba(32,33,36,0.25); z-index: 1001; text-decoration: none; }
 
     /* ==========================================
        MOBILE RESPONSIVE FIXES
@@ -138,6 +145,7 @@
       .proof-bar, .process-grid, .about-shell { grid-template-columns: 1fr; }
       .proof-item { justify-content: center; }
       .about-shell { padding: 2rem; }
+      .founder-portrait { max-width: 280px; margin: 0 auto; }
       
       .card { padding: 1.5rem; }
       
@@ -183,7 +191,7 @@
   </div>
 </section>
 
-<section style="padding: 2rem 0; background: #edf5f1;">
+<section style="padding: 2rem 0; background: #eef3ff;">
   <div class="container">
     <div class="proof-bar" aria-label="How Bapela builds">
       <div class="proof-item"><i class="fas fa-mobile-screen-button" aria-hidden="true"></i> Designed for mobile customers</div>
@@ -219,7 +227,7 @@
   </div>
 </section>
 
-<section id="process" style="background: #eef5f1;">
+<section id="process" style="background: #f0f4ff;">
   <div class="container">
     <div class="section-head">
       <h2>A straightforward way to get started</h2>
@@ -276,11 +284,16 @@
   <div class="container">
     <div class="about-shell">
       <div>
-        <p class="about-kicker">About Bapela Digital</p>
-        <h2>Independent development for practical business needs.</h2>
+        <div class="founder-portrait">
+          <img src="assets/lucky-malaka.webp" alt="Lucky Malaka, founder of Bapela Digital Systems" loading="lazy">
+        </div>
       </div>
       <div>
-        <p>I build websites and digital tools that make it easier for customers to understand a business, take the next step, and get in touch. The work on this site is my own and is linked directly so you can inspect it for yourself.</p>
+        <div class="brand-stamp"><img src="assets/bapela-digital-logo.webp" alt="Bapela Digital logo: We design, we develop, we grow." loading="lazy"></div>
+        <p class="about-kicker">Founder · Bapela Digital Systems</p>
+        <h2>Hi, I’m Lucky Malaka.</h2>
+        <p>I am a second-year Software Engineering student at Nelson Mandela University. I am building Bapela Digital through practical website and software projects that help businesses communicate clearly and make it easier for customers to take action.</p>
+        <div class="founder-meta"><span><i class="fas fa-graduation-cap" aria-hidden="true"></i>Second-year Software Engineering</span><span><i class="fas fa-building-columns" aria-hidden="true"></i>Nelson Mandela University</span></div>
         <p>I use clear communication, agreed scope, and real project work instead of exaggerated promises. If you have a business idea or a manual process that should work better online, we can discuss the right starting point.</p>
         <a href="#contact" class="btn" style="margin-top: 0.5rem;">Start a conversation <i class="fas fa-arrow-right"></i></a>
       </div>
@@ -288,7 +301,7 @@
   </div>
 </section>
 
-<section id="pricing" style="background: #eef5f1;">
+<section id="pricing" style="background: #f0f4ff;">
   <div class="container">
     <div class="section-head">
       <h2>Starting packages</h2>
