@@ -45,6 +45,9 @@
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
     .card { background: var(--card); padding: 2.5rem; border-radius: var(--radius); border: 1px solid var(--border); transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
     .card:hover { border-color: var(--brand); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    .project-card { color: inherit; text-decoration: none; display: block; }
+    .project-card img { display: block; }
+    .project-card:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; }
 
     /* Tech Stack Icons */
     .tech-icons { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; opacity: 0.5; filter: grayscale(1); margin-top: 2rem; }
@@ -98,6 +101,8 @@
       #pricing .card { transform: none !important; margin-bottom: 1rem; }
     }
   </style>
+  <link rel="icon" type="image/svg+xml" href="assets/bapela-logo.svg">
+  <link rel="apple-touch-icon" href="assets/bapela-logo.svg">
 </head>
 <body>
 
@@ -134,20 +139,26 @@
 <section id="cases">
   <div class="container">
     <div class="section-head">
-      <h2>Proven Solutions</h2>
-      <p>Technical logic built for business growth.</p>
+      <h2>Public work</h2>
+      <p>Selected projects that visitors can open and explore today.</p>
     </div>
     <div class="grid">
-      <div class="card">
-        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">NMU Logistics</span>
+      <a class="card project-card" href="https://litebite.netlify.app/" target="_blank" rel="noopener">
+        <img src="assets/litebite-preview.webp" alt="LiteBite Fast Food ordering website preview" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; margin-bottom: 1.25rem;" loading="lazy">
+        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">NMU Logistics · Live site</span>
         <h3 style="margin-top: 0.5rem;">LiteBite Orders</h3>
-        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">Full-stack ordering system featuring automated WhatsApp receipts, student-specific residence logic, and dynamic menu cutoffs.</p>
-      </div>
-      <div class="card">
-        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">Service Industry</span>
-        <h3 style="margin-top: 0.5rem;">Boikago Cleaning</h3>
-        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">Automated booking funnel built to eliminate manual admin, collect deposits securely, and professionalize brand positioning.</p>
-      </div>
+        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A public ordering experience for customizable kota meals, campus delivery information, and WhatsApp ordering.</p>
+      </a>
+      <a class="card project-card" href="https://github.com/beanboy908/YVONNE-CLEANS" target="_blank" rel="noopener">
+        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">Public GitHub project</span>
+        <h3 style="margin-top: 0.5rem;">Yvonne Cleans</h3>
+        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A service-business web experience with a clear public repository and customer-facing presentation.</p>
+      </a>
+      <a class="card project-card" href="https://github.com/beanboy908/nails-by-aimee" target="_blank" rel="noopener">
+        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">Public GitHub project</span>
+        <h3 style="margin-top: 0.5rem;">Nails by Aimee</h3>
+        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A focused beauty-service website with a concise, conversion-oriented public presentation.</p>
+      </a>
     </div>
   </div>
 </section>
