@@ -43,11 +43,16 @@
     .section-head { text-align: center; margin-bottom: 4rem; }
     .section-head h2 { font-family: 'Syne', sans-serif; font-size: 2.2rem; margin-bottom: 1rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    #cases .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .card { background: var(--card); padding: 2.5rem; border-radius: var(--radius); border: 1px solid var(--border); transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
     .card:hover { border-color: var(--brand); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-    .project-card { color: inherit; text-decoration: none; display: block; }
-    .project-card img { display: block; }
-    .project-card:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; }
+    .project-card { color: inherit; }
+    .project-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; margin-bottom: 1.25rem; }
+    .project-thumb { display: block; border-radius: 14px; }
+    .project-thumb:focus-visible, .project-links a:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; }
+    .project-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.25rem; }
+    .project-links a { color: var(--brand); font-size: 0.85rem; font-weight: 800; text-decoration: none; }
+    .project-links a:hover { text-decoration: underline; }
 
     /* Tech Stack Icons */
     .tech-icons { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; opacity: 0.5; filter: grayscale(1); margin-top: 2rem; }
@@ -86,7 +91,7 @@
       .hero h1 { font-size: 2.2rem; }
       .hero p { font-size: 1rem; }
 
-      .grid { grid-template-columns: 1fr; } /* Force cards to stack */
+      .grid, #cases .grid { grid-template-columns: 1fr; } /* Force cards to stack */
       
       .card { padding: 1.5rem; }
       
@@ -140,23 +145,48 @@
   <div class="container">
     <div class="section-head">
       <h2>Public work</h2>
-      <p>Explore the live websites behind these selected builds.</p>
+      <p>I built these projects and published them under the Lucky Dev GitHub account. Open the live websites or browse the source when you want to see more.</p>
     </div>
     <div class="grid">
-      <a class="card project-card" href="https://litebite.netlify.app/" target="_blank" rel="noopener">
-        <img src="assets/litebite-preview.webp" alt="Screenshot of the LiteBite Fast Food ordering website" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; margin-bottom: 1.25rem;" loading="lazy">
-        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">NMU Logistics · Live website</span>
+      <article class="card project-card">
+        <a class="project-thumb" href="https://litebite.netlify.app/" target="_blank" rel="noopener" aria-label="Open the LiteBite Orders live website">
+          <img src="assets/litebite-preview.webp" alt="Screenshot of the LiteBite Fast Food ordering website" loading="lazy">
+        </a>
+        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">Built by me · Live website</span>
         <h3 style="margin-top: 0.5rem;">LiteBite Orders</h3>
-        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A campus food-ordering experience with customizable kota meals, delivery information, and WhatsApp ordering.</p>
-        <span style="display: inline-flex; margin-top: 1rem; color: var(--brand); font-weight: 800; font-size: 0.85rem;">Visit live website →</span>
-      </a>
-      <a class="card project-card" href="https://yvonne-cleans.vercel.app/" target="_blank" rel="noopener">
-        <img src="assets/yvonne-cleans-preview.webp" alt="Screenshot of the Yvonne Cleans cleaning-service website" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; margin-bottom: 1.25rem;" loading="lazy">
-        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">Service industry · Live website</span>
+        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A campus food-ordering website for browsing kota meals, choosing add-ons, and sending an order through WhatsApp.</p>
+        <div class="project-links"><a href="https://litebite.netlify.app/" target="_blank" rel="noopener">Visit live website →</a></div>
+      </article>
+      <article class="card project-card">
+        <a class="project-thumb" href="https://yvonne-cleans.vercel.app/" target="_blank" rel="noopener" aria-label="Open the Yvonne Cleans live website">
+          <img src="assets/yvonne-cleans-preview.webp" alt="Screenshot of the Yvonne Cleans cleaning-service website" loading="lazy">
+        </a>
+        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">Built by me · Live website</span>
         <h3 style="margin-top: 0.5rem;">Yvonne Cleans</h3>
-        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A conversion-focused cleaning-service website with service discovery, quote capture, and WhatsApp contact flows.</p>
-        <span style="display: inline-flex; margin-top: 1rem; color: var(--brand); font-weight: 800; font-size: 0.85rem;">Visit live website →</span>
-      </a>
+        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A straightforward cleaning-service website that helps visitors understand the offer and start a WhatsApp enquiry.</p>
+        <div class="project-links"><a href="https://yvonne-cleans.vercel.app/" target="_blank" rel="noopener">Visit live website →</a></div>
+      </article>
+      <article class="card project-card">
+        <a class="project-thumb" href="https://litebite-website.vercel.app" target="_blank" rel="noopener" aria-label="Open the Litebite Website live project">
+          <img src="assets/litebite-preview.webp" alt="Screenshot of the Litebite website project" loading="lazy">
+        </a>
+        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">Built by me · Public project</span>
+        <h3 style="margin-top: 0.5rem;">Litebite Website</h3>
+        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">The public website project from my Lucky Dev account, focused on presenting the Litebite ordering experience.</p>
+        <div class="project-links">
+          <a href="https://litebite-website.vercel.app" target="_blank" rel="noopener">Open live site →</a>
+          <a href="https://github.com/nkadimengmaledimu-cmyk/Litebite-website" target="_blank" rel="noopener">View repository →</a>
+        </div>
+      </article>
+      <article class="card project-card">
+        <div style="height: 100%; min-height: 12rem; display: grid; place-items: center; border-radius: 14px; background: linear-gradient(135deg, rgba(42,191,176,0.16), rgba(255,255,255,0.03)); margin-bottom: 1.25rem;">
+          <i class="fas fa-robot" aria-hidden="true" style="font-size: 3rem; color: var(--brand);"></i>
+        </div>
+        <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">Built by me · Public project</span>
+        <h3 style="margin-top: 0.5rem;">Litebite Bot</h3>
+        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A JavaScript bot project from my Lucky Dev account, built as part of the Litebite software work.</p>
+        <div class="project-links"><a href="https://github.com/nkadimengmaledimu-cmyk/litebite-bot" target="_blank" rel="noopener">View repository →</a></div>
+      </article>
     </div>
   </div>
 </section>
