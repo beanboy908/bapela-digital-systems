@@ -30,4 +30,7 @@
 - [x] Verify the Explore Bapela navigation works cleanly on live desktop and phone-sized layouts.
 - [x] Replace the oversized sticky text navigation with a compact three-line hamburger menu on the homepage and About Lucky page.
 - [x] Verify the hamburger menu opens, closes, and routes correctly on live desktop and phone-sized layouts.
+- [x] Create a square Bapela logo favicon in standard search-compatible sizes from the supplied logo.
+- [x] Add favicon, web manifest, and consistent metadata to the homepage and About Lucky page.
+- [ ] Verify the published favicon assets and document the Google search-refresh timing limitation.
 - [x] Remove student, year, and university wording so the founder section presents Lucky Malaka only as Bapela Digital Systems founder.
