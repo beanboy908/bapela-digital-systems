@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Bapela Digital Systems</title>
+  <rect width="64" height="64" rx="15" fill="#183b36"/>
+  <path d="M18 13h17.5c10.2 0 16.6 5.2 16.6 13.2 0 4.5-2.2 8.1-6.4 10.1 5.3 2.1 8.1 6.2 8.1 11.4C53.8 56.1 47 61 36.3 61H18V13Zm10.6 8.8v10.6h6.5c4 0 6.3-1.9 6.3-5.4s-2.3-5.2-6.3-5.2h-6.5Zm0 19.2v11.1h8c4.2 0 6.7-2 6.7-5.6 0-3.7-2.5-5.5-6.7-5.5h-8Z" fill="#f7f4ee"/>
+  <circle cx="48" cy="15" r="4" fill="#00a895"/>
+  <circle cx="54" cy="27" r="2.8" fill="#00a895"/>
+  <path d="M48.4 19l3.7 5.2" stroke="#00a895" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

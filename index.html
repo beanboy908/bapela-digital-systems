@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bapela Digital Systems | Next-Gen Web Solutions</title>
-  
+  <title>Bapela Digital Systems | Websites, Ordering & WhatsApp Enquiries</title>
+  <meta name="description" content="Bapela Digital Systems builds practical business websites, online ordering pages, and WhatsApp enquiry flows for South African businesses.">
+  <meta name="theme-color" content="#183b36">
+  <meta property="og:title" content="Bapela Digital Systems">
+  <meta property="og:description" content="Practical websites, online ordering pages, and WhatsApp enquiry flows for growing businesses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bapeladigital.co.za/">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   
@@ -33,6 +38,9 @@
     .header-inner { display: flex; justify-content: space-between; align-items: center; }
     .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; color: var(--ink); text-decoration: none; }
     .logo span { color: var(--brand); }
+    .header-nav { display: flex; align-items: center; gap: 1.15rem; }
+    .header-nav a { color: var(--sub); text-decoration: none; font-size: 0.78rem; font-weight: 800; }
+    .header-nav a:hover { color: var(--brand-strong); }
 
     /* Hero */
     .hero { padding: 8rem 0 5rem; text-align: center; background: linear-gradient(135deg, #f7f4ee 0%, #eef7f2 55%, #dfeee7 100%); }
@@ -40,6 +48,9 @@
     .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 8vw, 4.2rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; color: var(--ink); }
     .hero h1 span { color: var(--brand); text-shadow: 0 0 30px var(--brand-glow); }
     .hero p { color: var(--sub); font-size: 1.1rem; max-width: 600px; margin: 0 auto 3rem; }
+    .hero-actions { display: flex; justify-content: center; gap: 0.9rem; flex-wrap: wrap; }
+    .btn-outline { background: transparent; color: var(--brand-strong); border: 1px solid #8dcdbf; box-shadow: none; }
+    .btn-outline:hover { background: #ffffff; color: var(--brand-strong); }
 
     /* Grids & Cards */
     section { padding: 6rem 0; }
@@ -60,6 +71,27 @@
     .other-project a { color: var(--brand); font-weight: 800; text-decoration: none; }
     .other-project a:hover { text-decoration: underline; }
 
+    /* Services, process and credibility */
+    .proof-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .proof-item { display: flex; gap: 0.75rem; align-items: center; color: var(--ink); font-size: 0.9rem; font-weight: 700; }
+    .proof-item i { width: 2.1rem; height: 2.1rem; display: grid; place-items: center; border-radius: 50%; background: #dff3eb; color: var(--brand-strong); }
+    .service-card { min-height: 100%; }
+    .service-icon { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 14px; background: #dff3eb; color: var(--brand-strong); font-size: 1.2rem; margin-bottom: 1.4rem; }
+    .service-card h3 { font-family: 'Syne', sans-serif; font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--ink); }
+    .service-card p { color: var(--sub); font-size: 0.94rem; }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .step { position: relative; padding: 1.5rem; border-left: 2px solid #9bcfc3; }
+    .step-number { display: block; color: var(--brand); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 0.7rem; }
+    .step h3 { color: var(--ink); font-family: 'Syne', sans-serif; font-size: 1rem; margin-bottom: 0.5rem; }
+    .step p { color: var(--sub); font-size: 0.87rem; }
+    .about-shell { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 2rem; align-items: start; background: var(--ink); border-radius: var(--radius); padding: 3rem; }
+    .about-kicker { color: var(--brand-on-dark); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+    .about-shell h2 { color: #ffffff; font-family: 'Syne', sans-serif; font-size: 2.1rem; line-height: 1.15; margin-top: 0.75rem; }
+    .about-shell p { color: #d6e4df; margin-bottom: 1rem; }
+    .case-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.25rem; }
+    .case-fact { padding-top: 0.75rem; border-top: 1px solid var(--border); color: var(--sub); font-size: 0.82rem; }
+    .case-fact strong { display: block; color: var(--ink); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+
     /* Tech Stack Icons */
     .tech-icons { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; opacity: 0.7; margin-top: 2rem; color: var(--ink); }
     .tech-icons i, .tech-icons span { font-size: 2rem; transition: 0.3s; }
@@ -78,6 +110,9 @@
     /* Form */
     .form-wrap { background: var(--card); padding: 3rem; border-radius: var(--radius); border: 1px solid var(--border); max-width: 600px; margin: 0 auto; }
     input, select, textarea { width: 100%; background: #f8fbf9; border: 1px solid #c7d8d1; padding: 1rem; border-radius: 12px; color: var(--text); margin-bottom: 1rem; font-family: inherit; }
+    .contact-intro { max-width: 600px; text-align: center; color: var(--sub); margin: -0.75rem auto 2rem; }
+    .contact-meta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; color: var(--sub); font-size: 0.82rem; margin-top: 1.25rem; }
+    .contact-meta a { color: var(--brand-strong); font-weight: 800; text-decoration: none; }
 
     .btn { background: var(--brand); color: #ffffff; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 10px; border: none; cursor: pointer; transition: 0.3s; box-shadow: 0 8px 18px rgba(0, 127, 115, 0.2); }
     .btn:hover { background: var(--brand-strong); transform: translateY(-2px); }
@@ -93,12 +128,16 @@
       section { padding: 4rem 0; }
       
       .header-inner { flex-direction: column; gap: 15px; text-align: center; }
+      .header-nav { display: none; }
       
       .hero { padding: 5rem 0 3rem; }
       .hero h1 { font-size: 2.2rem; }
       .hero p { font-size: 1rem; }
 
       .grid, #cases .grid { grid-template-columns: 1fr; } /* Force cards to stack */
+      .proof-bar, .process-grid, .about-shell { grid-template-columns: 1fr; }
+      .proof-item { justify-content: center; }
+      .about-shell { padding: 2rem; }
       
       .card { padding: 1.5rem; }
       
@@ -113,37 +152,84 @@
       #pricing .card { transform: none !important; margin-bottom: 1rem; }
     }
   </style>
-  <link rel="icon" type="image/svg+xml" href="assets/bapela-logo.svg">
-  <link rel="apple-touch-icon" href="assets/bapela-logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/bapela-favicon.svg">
+  <link rel="alternate icon" href="assets/bapela-favicon.svg">
+  <link rel="apple-touch-icon" href="assets/bapela-favicon.svg">
 </head>
 <body>
 
 <header>
   <div class="container header-inner">
     <a href="#" class="logo">Bapela <span>Digital</span></a>
+    <nav class="header-nav" aria-label="Primary navigation">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#cases">Work</a>
+      <a href="#about">About</a>
+    </nav>
     <a href="#contact" class="btn" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">Request Quote</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="container">
-    <div class="status-badge"><i class="fas fa-bolt"></i> ACCEPTING NEW CLIENTS</div>
-    <h1>High-Performance Web <span>Systems</span>.</h1>
-    <p>We build scalable digital infrastructure and automated systems for businesses ready to dominate their market.</p>
-    <a href="#cases" class="btn">View Case Studies <i class="fas fa-arrow-right"></i></a>
+    <div class="status-badge"><i class="fas fa-bolt"></i> Websites · Ordering · WhatsApp</div>
+    <h1>Digital tools that help customers <span>take action</span>.</h1>
+    <p>Bapela Digital Systems builds practical business websites, online ordering pages, and WhatsApp enquiry flows for South African businesses.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn">Request a Quote <i class="fas fa-arrow-right"></i></a>
+      <a href="#cases" class="btn btn-outline">See Real Projects</a>
+    </div>
   </div>
 </section>
 
 <section style="padding: 2rem 0; background: #edf5f1;">
   <div class="container">
-    <div class="tech-icons">
-      <i class="fab fa-html5"></i>
-      <i class="fab fa-css3-alt"></i>
-      <i class="fab fa-js"></i>
-      <i class="fab fa-node-js"></i>
-      <span style="font-family: 'Syne'; font-weight: 800; font-size: 1.5rem;">C#</span>
-      <i class="fas fa-database"></i>
-      <i class="fab fa-git-alt"></i>
+    <div class="proof-bar" aria-label="How Bapela builds">
+      <div class="proof-item"><i class="fas fa-mobile-screen-button" aria-hidden="true"></i> Designed for mobile customers</div>
+      <div class="proof-item"><i class="fab fa-whatsapp" aria-hidden="true"></i> Clear WhatsApp enquiry paths</div>
+      <div class="proof-item"><i class="fas fa-code" aria-hidden="true"></i> Custom-built for your needs</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>What I can build for your business</h2>
+      <p>Choose a starting point that fits the way your customers find you, ask questions, or place an order.</p>
+    </div>
+    <div class="grid">
+      <article class="card service-card">
+        <div class="service-icon"><i class="fas fa-window-maximize" aria-hidden="true"></i></div>
+        <h3>Business websites</h3>
+        <p>A clear online home for your services, contact details, business story, and the reasons customers should choose you.</p>
+      </article>
+      <article class="card service-card">
+        <div class="service-icon"><i class="fas fa-bag-shopping" aria-hidden="true"></i></div>
+        <h3>Online ordering</h3>
+        <p>Simple menus and product pages that help customers browse options, choose extras, and send an order through WhatsApp.</p>
+      </article>
+      <article class="card service-card">
+        <div class="service-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+        <h3>Bookings &amp; enquiries</h3>
+        <p>Focused contact flows for customers who need to request a quote, book a service, or start a conversation quickly.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="background: #eef5f1;">
+  <div class="container">
+    <div class="section-head">
+      <h2>A straightforward way to get started</h2>
+      <p>No pressure and no surprise build work. First, we agree on what you need.</p>
+    </div>
+    <div class="process-grid">
+      <article class="step"><span class="step-number">01</span><h3>Tell me your goal</h3><p>Share what your business does and what you need the website to help customers do.</p></article>
+      <article class="step"><span class="step-number">02</span><h3>Agree the scope</h3><p>I prepare a clear quote based on the pages, features, and content your project needs.</p></article>
+      <article class="step"><span class="step-number">03</span><h3>Build and review</h3><p>I develop the agreed solution and you review it before the final handover.</p></article>
+      <article class="step"><span class="step-number">04</span><h3>Launch with confidence</h3><p>Once everything is approved, your website is prepared for customers to use.</p></article>
     </div>
   </div>
 </section>
@@ -151,8 +237,8 @@
 <section id="cases">
   <div class="container">
     <div class="section-head">
-      <h2>Public work</h2>
-      <p>I built these projects and published them under the Lucky Dev GitHub account. Open the live websites or browse the source when you want to see more.</p>
+      <h2>Real projects, with the details that matter</h2>
+      <p>I built these projects and published them under the Lucky Dev GitHub account. Each project below shows the customer task it was designed to solve and the features delivered.</p>
     </div>
     <div class="grid">
       <article class="card project-card">
@@ -161,7 +247,11 @@
         </a>
         <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">Built by me · Live website</span>
         <h3 style="margin-top: 0.5rem;">LiteBite Orders</h3>
-        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A campus food-ordering website for browsing kota meals, choosing add-ons, and sending an order through WhatsApp.</p>
+        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A campus food-ordering website designed to make it easy to browse kota meals, choose add-ons, and send an order through WhatsApp.</p>
+        <div class="case-facts">
+          <p class="case-fact"><strong>Goal</strong>Make food choices easy to browse and order.</p>
+          <p class="case-fact"><strong>Delivered</strong>Menu browsing, add-ons, and WhatsApp order handoff.</p>
+        </div>
         <div class="project-links"><a href="https://litebite.netlify.app/" target="_blank" rel="noopener">Visit live website →</a></div>
       </article>
       <article class="card project-card">
@@ -170,7 +260,11 @@
         </a>
         <span style="font-size: 0.7rem; color: var(--brand); font-weight: 800; text-transform: uppercase;">Built by me · Live website</span>
         <h3 style="margin-top: 0.5rem;">Yvonne Cleans</h3>
-        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A straightforward cleaning-service website that helps visitors understand the offer and start a WhatsApp enquiry.</p>
+        <p style="font-size: 0.9rem; color: var(--sub); margin-top: 1rem;">A cleaning-service website that helps visitors understand the offer and start a WhatsApp enquiry without searching for contact details.</p>
+        <div class="case-facts">
+          <p class="case-fact"><strong>Goal</strong>Explain the service clearly and invite contact.</p>
+          <p class="case-fact"><strong>Delivered</strong>Service-led pages and a visible WhatsApp enquiry path.</p>
+        </div>
         <div class="project-links"><a href="https://yvonne-cleans.vercel.app/" target="_blank" rel="noopener">Visit live website →</a></div>
       </article>
     </div>
@@ -178,10 +272,27 @@
   </div>
 </section>
 
+<section id="about">
+  <div class="container">
+    <div class="about-shell">
+      <div>
+        <p class="about-kicker">About Bapela Digital</p>
+        <h2>Independent development for practical business needs.</h2>
+      </div>
+      <div>
+        <p>I build websites and digital tools that make it easier for customers to understand a business, take the next step, and get in touch. The work on this site is my own and is linked directly so you can inspect it for yourself.</p>
+        <p>I use clear communication, agreed scope, and real project work instead of exaggerated promises. If you have a business idea or a manual process that should work better online, we can discuss the right starting point.</p>
+        <a href="#contact" class="btn" style="margin-top: 0.5rem;">Start a conversation <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="pricing" style="background: #eef5f1;">
   <div class="container">
     <div class="section-head">
-      <h2>Investment Packages</h2>
+      <h2>Starting packages</h2>
+      <p>A final quote depends on your requirements. No build work begins until the scope and price are agreed.</p>
     </div>
     <div class="grid">
       <div class="card">
@@ -218,6 +329,10 @@
       <p>We follow a 50/50 model. A 50% commencement fee secures your project on our dev calendar, and the balance is paid once you are satisfied.</p>
     </div>
     <div class="faq-item">
+      <h4>What happens after I send an enquiry?</h4>
+      <p>Your enquiry opens a WhatsApp conversation where we can discuss your business, what you need customers to do, and the best starting package before a quote is prepared.</p>
+    </div>
+    <div class="faq-item">
       <h4>Can you build custom features?</h4>
       <p>Absolutely. As software developers, we code custom logic for orders, bookings, and complex data tracking.</p>
     </div>
@@ -228,6 +343,7 @@
   <div class="container">
     <div class="form-wrap">
       <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Syne';">Start Your Project</h2>
+      <p class="contact-intro">Tell me what your business does and what you want customers to be able to do online. Your message opens WhatsApp so we can discuss the right approach before a quote is prepared.</p>
       <input type="text" id="name" placeholder="Business Name">
       <input type="tel" id="phone" placeholder="WhatsApp Number">
       <select id="package">
@@ -237,6 +353,7 @@
       </select>
       <textarea id="msg" rows="4" placeholder="Tell us about your requirements..."></textarea>
       <button class="btn" style="width: 100%; justify-content: center;" onclick="sendToWA()">Send Inquiry <i class="fas fa-paper-plane"></i></button>
+      <div class="contact-meta"><span><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp: <a href="https://wa.me/27732221876" target="_blank" rel="noopener">073 222 1876</a></span><span><i class="fas fa-list-check" aria-hidden="true"></i> Scope and quote agreed first</span></div>
     </div>
   </div>
 </section>
@@ -245,7 +362,7 @@
   <div class="container">
     <p><strong>Bapela Digital Systems</strong></p>
     <p style="margin-top: 10px;">Official Domain: <a href="https://bapeladigital.co.za" style="color: var(--brand-on-dark); text-decoration: none;">bapeladigital.co.za</a></p>
-    <p style="opacity: 0.5; margin-top: 20px;">© 2026 | SOFTWARE DEVELOPMENT & DIGITAL INFRASTRUCTURE</p>
+    <p style="opacity: 0.7; margin-top: 20px;">© 2026 | WEBSITES, ORDERING &amp; DIGITAL SYSTEMS</p>
   </div>
 </footer>
 
@@ -260,8 +377,8 @@
 
     if(!name || !phone) return alert('Please provide your name and number.');
 
-    const text = `*New Bapela Digital Inquiry*%0A%0A*Business:* ${name}%0A*WhatsApp:* ${phone}%0A*Package:* ${pkg}%0A*Message:* ${msg}`;
-    window.open(`https://wa.me/27732221876?text=${text}`, '_blank');
+    const text = `New Bapela Digital Inquiry\n\nBusiness: ${name}\nWhatsApp: ${phone}\nPackage: ${pkg}\nMessage: ${msg}`;
+    window.open(`https://wa.me/27732221876?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   }
 </script>
 

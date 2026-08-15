@@ -9,3 +9,9 @@
 - [x] Document the highest-impact improvements needed before relying on the site for client acquisition.
 - [x] Replace the overly dark colour system with a warmer, approachable brand palette while retaining the teal identity.
 - [x] Verify text contrast, card readability, and calls to action after the colour redesign.
+- [x] Benchmark the live Bapela site against effective small-agency websites and identify gaps.
+- [x] Add a clear services section for local business website, ordering, and WhatsApp booking needs.
+- [x] Add a truthful owner and client-journey section that explains how enquiries, quotes, build, review, and launch work.
+- [x] Expand the real project cards into concise, factual case studies without fabricated reviews or results.
+- [x] Create and install a dedicated Bapela browser-tab/search icon and supporting metadata.
+- [ ] Judge the revised live site, fix material issues, and verify the published experience.
