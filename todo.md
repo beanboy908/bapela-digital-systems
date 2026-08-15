@@ -22,5 +22,5 @@
 - [x] Inspect the corrected founder portrait on the live Bapela website before reporting completion.
 - [x] Remove the entire black founder card, including the portrait, logo block, biography, and founder call to action.
 - [x] Remove the obsolete About navigation link and founder-card styling after the section is removed.
-- [ ] Verify the simplified Bapela page on the live mobile layout before reporting completion.
+- [x] Verify the simplified Bapela page on the live mobile layout before reporting completion.
 - [x] Remove student, year, and university wording so the founder section presents Lucky Malaka only as Bapela Digital Systems founder.
