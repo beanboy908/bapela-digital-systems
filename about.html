@@ -16,14 +16,20 @@
     html { scroll-behavior: smooth; }
     body { background: var(--paper); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.6; }
     .container { width: min(1100px, calc(100% - 3rem)); margin: 0 auto; }
-    header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 1.15rem 0; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: .72rem 0; }
     .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
     .wordmark { color: var(--ink); font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 800; letter-spacing: .13em; text-decoration: none; text-transform: uppercase; }
     .wordmark span { color: var(--brand); }
-    .nav { display: flex; align-items: center; gap: 1.15rem; }
-    .nav a { color: var(--sub); font-size: .78rem; font-weight: 800; text-decoration: none; }
-    .nav a:hover, .nav a[aria-current="page"] { color: var(--brand-strong); }
-    .quote { background: var(--brand); border-radius: 999px; box-shadow: 0 8px 18px rgba(30,94,216,.2); color: #fff; font-size: .8rem; font-weight: 800; padding: .7rem 1.15rem; text-decoration: none; }
+    .menu-wrap { position: relative; }
+    .menu-toggle { align-items: center; background: #ffffff; border: 1px solid #cbd9f4; border-radius: 12px; cursor: pointer; display: inline-flex; flex-direction: column; gap: 5px; height: 42px; justify-content: center; padding: 0; width: 44px; }
+    .menu-toggle span { background: var(--ink); border-radius: 2px; display: block; height: 2px; transition: transform .18s ease, opacity .18s ease; width: 19px; }
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .menu-panel { background: #ffffff; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 16px 34px rgba(32,33,36,.12); display: grid; gap: .15rem; min-width: 176px; opacity: 0; padding: .55rem; pointer-events: none; position: absolute; right: 0; top: calc(100% + .65rem); transform: translateY(-6px); transition: opacity .18s ease, transform .18s ease; visibility: hidden; }
+    .menu-panel.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); visibility: visible; }
+    .menu-panel a { border-radius: 10px; color: var(--ink); font-size: .84rem; font-weight: 800; padding: .75rem .85rem; text-decoration: none; }
+    .menu-panel a:hover, .menu-panel a:focus-visible { background: #eef3ff; color: var(--brand-strong); outline: none; }
     main { padding: 5.5rem 0 4rem; }
     .eyebrow { color: var(--brand-strong); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
     .intro { align-items: center; display: grid; gap: clamp(2rem, 6vw, 5.5rem); grid-template-columns: minmax(220px, .75fr) minmax(0, 1.25fr); }
@@ -50,19 +56,21 @@
     .explore a span { color: var(--brand-strong); display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: .8rem; font-weight: 700; margin-top: .45rem; }
     footer { background: var(--ink); color: #dfe6f3; margin-top: 5.5rem; padding: 3rem 0; text-align: center; font-size: .85rem; }
     footer a { color: #a8c5ff; text-decoration: none; }
-    @media (max-width: 768px) { .container { width: min(100% - 2rem, 1100px); } .header-inner { flex-wrap: wrap; gap: .8rem; } .nav { gap: 1rem; justify-content: center; order: 3; width: 100%; } .nav a { font-size: .72rem; } .intro { grid-template-columns: 1fr; text-align: center; } .portrait-wrap { margin: 0 auto; max-width: 260px; } .actions { justify-content: center; } .cards, .explore-grid { grid-template-columns: 1fr; } .focus { margin-top: 4rem; } .explore { margin-top: 4rem; padding: 1.5rem; } }
+    @media (max-width: 768px) { .container { width: min(100% - 2rem, 1100px); } .header-inner { gap: .8rem; } .intro { grid-template-columns: 1fr; text-align: center; } .portrait-wrap { margin: 0 auto; max-width: 260px; } .actions { justify-content: center; } .cards, .explore-grid { grid-template-columns: 1fr; } .focus { margin-top: 4rem; } .explore { margin-top: 4rem; padding: 1.5rem; } }
   </style>
 </head>
 <body>
   <header>
     <div class="container header-inner">
       <a class="wordmark" href="index.html">Bapela <span>Digital</span></a>
-      <nav class="nav" aria-label="Explore Bapela">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#cases">Projects</a>
-        <a href="about.html" aria-current="page">About Lucky</a>
-      </nav>
-      <a class="quote" href="index.html#contact">Request Quote</a>
+      <div class="menu-wrap">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+        <nav class="menu-panel" id="primary-menu" aria-label="Explore Bapela">
+          <a href="index.html#services">Services</a>
+          <a href="index.html#cases">Projects</a>
+          <a href="about.html" aria-current="page">About Lucky</a>
+        </nav>
+      </div>
     </div>
   </header>
   <main>
@@ -103,5 +111,18 @@
     </section>
   </main>
   <footer><div class="container"><p><strong>Bapela Digital Systems</strong></p><p style="margin-top:.55rem;"><a href="index.html">Back to the main website</a></p></div></footer>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const primaryMenu = document.getElementById('primary-menu');
+    function closeMenu() { menuToggle.setAttribute('aria-expanded', 'false'); primaryMenu.classList.remove('is-open'); }
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      primaryMenu.classList.toggle('is-open', !isOpen);
+    });
+    primaryMenu.addEventListener('click', closeMenu);
+    document.addEventListener('click', (event) => { if (!event.target.closest('.menu-wrap')) closeMenu(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
+  </script>
 </body>
 </html>
