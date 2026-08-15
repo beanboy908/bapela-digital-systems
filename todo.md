@@ -37,4 +37,7 @@
 - [x] Implement and verify authentic, portfolio-strengthening improvements before publishing public GitHub contributions.
 - [x] Check whether the current Google account can access Search Console for bapeladigital.co.za and prepare a re-crawl request.
 - [x] Submit a Google re-indexing request after the user completed the Search Console request and sitemap submission.
+- [x] Inspect live Bapela search and metadata signals for Lucky Malaka ownership, current projects, and Legacy Shine references.
+- [x] Add truthful structured ownership and current-project metadata for Lucky Malaka, LiteBite, and Yvonne Cleans.
+- [ ] Verify the published metadata and provide Search Console indexing steps for the homepage and About Lucky page.
 - [x] Remove student, year, and university wording so the founder section presents Lucky Malaka only as Bapela Digital Systems founder.
