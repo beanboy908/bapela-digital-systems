@@ -84,17 +84,6 @@
     .step-number { display: block; color: var(--brand); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 0.7rem; }
     .step h3 { color: var(--ink); font-family: 'Syne', sans-serif; font-size: 1rem; margin-bottom: 0.5rem; }
     .step p { color: var(--sub); font-size: 0.87rem; }
-    .about-shell { display: grid; grid-template-columns: minmax(220px, 0.62fr) minmax(0, 1.38fr); gap: 2rem; align-items: start; background: var(--ink); border-radius: var(--radius); padding: 2rem; }
-    .about-kicker { color: var(--brand-on-dark); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
-    .about-shell h2 { color: #ffffff; font-family: 'Syne', sans-serif; font-size: 2.1rem; line-height: 1.15; margin-top: 0.75rem; }
-    .about-shell p { color: #d6e4df; margin-bottom: 1rem; }
-    .founder-portrait { background: #121316; border-radius: 18px; padding: 0.5rem; }
-    .founder-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; border-radius: 13px; }
-    .brand-stamp { display: inline-flex; max-width: 210px; padding: 0.55rem; margin-bottom: 1.25rem; background: #ffffff; border-radius: 12px; }
-    .brand-stamp img { display: block; width: 100%; border-radius: 8px; }
-    .founder-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.25rem 0 1.5rem; }
-    .founder-meta span { color: #e4ebf8; border: 1px solid rgba(168, 197, 255, 0.35); border-radius: 100px; padding: 0.5rem 0.75rem; font-size: 0.78rem; }
-    .founder-meta i { color: var(--brand-on-dark); margin-right: 0.4rem; }
     .case-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.25rem; }
     .case-fact { padding-top: 0.75rem; border-top: 1px solid var(--border); color: var(--sub); font-size: 0.82rem; }
     .case-fact strong { display: block; color: var(--ink); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
@@ -142,10 +131,8 @@
       .hero p { font-size: 1rem; }
 
       .grid, #cases .grid { grid-template-columns: 1fr; } /* Force cards to stack */
-      .proof-bar, .process-grid, .about-shell { grid-template-columns: 1fr; }
+      .proof-bar, .process-grid { grid-template-columns: 1fr; }
       .proof-item { justify-content: center; }
-      .about-shell { padding: 2rem; }
-      .founder-portrait { max-width: 280px; margin: 0 auto; }
       
       .card { padding: 1.5rem; }
       
@@ -173,7 +160,6 @@
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#cases">Work</a>
-      <a href="#about">About</a>
     </nav>
     <a href="#contact" class="btn" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">Request Quote</a>
   </div>
@@ -277,26 +263,6 @@
       </article>
     </div>
     <p class="other-project">Other public code: <a href="https://github.com/nkadimengmaledimu-cmyk/litebite-bot" target="_blank" rel="noopener">Litebite Bot on GitHub →</a></p>
-  </div>
-</section>
-
-<section id="about">
-  <div class="container">
-    <div class="about-shell">
-      <div>
-        <div class="founder-portrait">
-          <img src="assets/lucky-malaka-portrait.webp" alt="Lucky Malaka, founder of Bapela Digital Systems" loading="lazy">
-        </div>
-      </div>
-      <div>
-        <div class="brand-stamp"><img src="assets/bapela-digital-logo.webp" alt="Bapela Digital logo: We design, we develop, we grow." loading="lazy"></div>
-        <p class="about-kicker">Founder · Bapela Digital Systems</p>
-        <h2>Hi, I’m Lucky Malaka.</h2>
-        <p>I build Bapela Digital through practical website and software projects that help businesses communicate clearly, create a confident online presence, and make it easier for customers to take action.</p>
-        <p>I use clear communication, agreed scope, and real project work instead of exaggerated promises. If you have a business idea or a manual process that should work better online, we can discuss the right starting point.</p>
-        <a href="#contact" class="btn" style="margin-top: 0.5rem;">Start a conversation <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
   </div>
 </section>
 
