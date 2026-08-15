@@ -33,4 +33,8 @@
 - [x] Create a square Bapela logo favicon in standard search-compatible sizes from the supplied logo.
 - [x] Add favicon, web manifest, and consistent metadata to the homepage and About Lucky page.
 - [x] Verify the published favicon assets and document the Google search-refresh timing limitation.
+- [x] Review Lucky’s public GitHub profile and select meaningful public-project improvements that will strengthen the contribution history.
+- [x] Implement and verify authentic, portfolio-strengthening improvements before publishing public GitHub contributions.
+- [x] Check whether the current Google account can access Search Console for bapeladigital.co.za and prepare a re-crawl request.
+- [x] Submit a Google re-indexing request after the user completed the Search Console request and sitemap submission.
 - [x] Remove student, year, and university wording so the founder section presents Lucky Malaka only as Bapela Digital Systems founder.

@@ -44,8 +44,21 @@ The agency website is available at [bapeladigital.co.za](https://bapeladigital.c
 ```bash
 git clone https://github.com/beanboy908/bapela-digital-systems.git
 cd bapela-digital-systems
-# Open index.html in a modern browser
+python3 -m http.server 8080
 ```
+
+Open `http://localhost:8080` in a browser. The site includes `index.html` for the main page, `about.html` for the founder page, and a compact hamburger menu that links visitors between services, projects, and the founder page.
+
+## Search and sharing readiness
+
+The production site includes standard assets and metadata for browsers, social sharing, and search crawlers:
+
+- Square Bapela logo icons at 48px, 192px, and 512px, plus a root `favicon.ico`.
+- A `site.webmanifest` for browser and mobile icon metadata.
+- Canonical URLs and organization logo metadata for the main page.
+- `robots.txt` and `sitemap.xml` for crawler discovery.
+
+Google controls when it refreshes a search result after crawling these assets. The repository includes the source files that make the refreshed presentation available.
 
 ## Working principles
 
