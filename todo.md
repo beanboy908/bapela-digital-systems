@@ -23,4 +23,9 @@
 - [x] Remove the entire black founder card, including the portrait, logo block, biography, and founder call to action.
 - [x] Remove the obsolete About navigation link and founder-card styling after the section is removed.
 - [x] Verify the simplified Bapela page on the live mobile layout before reporting completion.
+- [x] Create a separate About Lucky page with a circular portrait and concise Bapela founder introduction.
+- [x] Add About Lucky links to the homepage navigation and the new page.
+- [ ] Verify the published About Lucky page on desktop and phone-sized live layouts before reporting completion.
+- [x] Add a polished Explore Bapela navigation with clear Services, Projects, and About Lucky destinations.
+- [ ] Verify the Explore Bapela navigation works cleanly on live desktop and phone-sized layouts.
 - [x] Remove student, year, and university wording so the founder section presents Lucky Malaka only as Bapela Digital Systems founder.
