@@ -19,5 +19,5 @@
 - [x] Add the supplied Bapela Digital logo to the live site and align the browser-tab icon with it.
 - [x] Verify the published founder and logo presentation across the live site.
 - [x] Replace the full-body founder image with a professional upper-body portrait crop.
-- [ ] Inspect the corrected founder portrait on the live Bapela website before reporting completion.
+- [x] Inspect the corrected founder portrait on the live Bapela website before reporting completion.
 - [x] Remove student, year, and university wording so the founder section presents Lucky Malaka only as Bapela Digital Systems founder.
