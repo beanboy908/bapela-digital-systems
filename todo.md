@@ -63,4 +63,4 @@
 - [x] Validate and publish the redesigned Legacy Shine footer.
 - [x] Audit the live and repository Bapela metadata, JSON-LD, favicon, and founder-name signals.
 - [x] Strengthen truthful Organization and Person structured data for Lucky Malaka and Bapela Digital Systems.
-- [ ] Validate the updated markup and provide Google Search Console re-indexing guidance.
+- [x] Validate the updated markup and provide Google Search Console re-indexing guidance.
