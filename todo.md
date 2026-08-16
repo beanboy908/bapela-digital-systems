@@ -64,3 +64,24 @@
 - [x] Audit the live and repository Bapela metadata, JSON-LD, favicon, and founder-name signals.
 - [x] Strengthen truthful Organization and Person structured data for Lucky Malaka and Bapela Digital Systems.
 - [x] Validate the updated markup and provide Google Search Console re-indexing guidance.
+- [ ] Verify the About Lucky page is crawl-eligible after Search Console reported it discovered but not indexed.
+- [ ] Guide a live URL test and first indexing request for the About Lucky page.
+- [ ] Confirm the crawl request and provide the appropriate monitoring timeline.
+- [ ] Audit the public Yvonne Cleans website and repository for Google indexing prerequisites.
+- [ ] Add truthful Yvonne Cleans search metadata, structured data, and crawl files where needed.
+- [ ] Validate and publish the Yvonne Cleans indexing improvements, then guide Search Console submission.
+- [x] Replace the personal Legacy Shine footer credit with a Bapela Digital Systems business credit and official site link.
+- [x] Validate and publish the Bapela Digital Systems attribution update on Legacy Shine.
+- [x] Replace the plain Legacy Shine Bapela wording with a refined, reference-inspired Bapela Digital credit.
+- [x] Validate and publish the polished Legacy Shine footer credit.
+- [x] Simplify the Legacy Shine Bapela credit wording so it avoids repeated “digital” and “systems” language.
+- [x] Validate and publish the concise Legacy Shine Bapela credit.
+- [ ] Inspect available LinkedIn and social account connections for Lucky Malaka and Bapela Digital Systems.
+- [ ] Prepare consistent professional LinkedIn and social profile content using the verified Lucky Malaka and Bapela identity.
+- [ ] Update authenticated profile information only after final confirmation, then add verified profile links to Bapela metadata.
+- [ ] Add the supplied Lucky Malaka LinkedIn profile URL to Bapela’s connected identity signals.
+- [ ] Add the supplied Lucky Malaka Facebook profile URL to Bapela’s connected identity signals.
+- [ ] Validate the social links and publish the metadata update under the beanboy908 identity.
+
+- [ ] Use only the user-supplied public LinkedIn and Facebook URLs; do not request credentials or edit the external profiles.
+- [ ] Add the supplied public profile URLs to Bapela’s founder schema and visible social links.
