@@ -91,3 +91,12 @@
 - [x] Remove fabricated Yvonne Cleans testimonial, rating, and client-count claims before publishing SEO changes.
 - [x] Replace removed social-proof content with truthful service-focused copy without inventing customer evidence.
 
+- [x] Do not add a LinkedIn and Facebook social row to the Yvonne Cleans footer; the user clarified that Search Console verification was needed instead.
+- [x] Remove the unrequested Yvonne Cleans footer social-row draft before publishing the verification update.
+
+- [x] Add the user-supplied Google Search Console verification tag to the Yvonne Cleans homepage head.
+- [ ] Validate and publish the Yvonne Cleans verification-tag update, then complete Search Console verification.
+- [ ] Confirm the Google Search Console daily indexing-request quota guidance and retry the Yvonne Cleans request after the quota resets.
+- [x] Capture the current Legacy Shine public website as a project-preview image.
+- [x] Add a linked Legacy Shine project card to the Bapela Digital Systems portfolio.
+- [ ] Validate and publish the Legacy Shine portfolio-card update.
