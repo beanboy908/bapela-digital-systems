@@ -99,4 +99,4 @@
 - [ ] Confirm the Google Search Console daily indexing-request quota guidance and retry the Yvonne Cleans request after the quota resets.
 - [x] Capture the current Legacy Shine public website as a project-preview image.
 - [x] Add a linked Legacy Shine project card to the Bapela Digital Systems portfolio.
-- [ ] Validate and publish the Legacy Shine portfolio-card update.
+- [x] Validate and publish the Legacy Shine portfolio-card update.
