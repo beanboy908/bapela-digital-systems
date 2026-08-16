@@ -5,12 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bapela Digital Systems | Lucky Malaka — Websites & Ordering</title>
   <meta name="description" content="Bapela Digital Systems is owned and operated by Lucky Malaka. We build practical business websites, online ordering pages, and WhatsApp enquiry flows for South African businesses.">
+  <meta name="author" content="Lucky Malaka">
+  <meta name="creator" content="Lucky Malaka">
   <meta name="theme-color" content="#1e5ed8">
   <meta property="og:title" content="Bapela Digital Systems">
   <meta property="og:description" content="Lucky Malaka builds practical websites, ordering pages, and WhatsApp enquiry flows through Bapela Digital Systems.">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bapela Digital Systems">
+  <meta property="og:locale" content="en_ZA">
   <meta property="og:url" content="https://bapeladigital.co.za/">
   <meta property="og:image" content="https://bapeladigital.co.za/assets/bapela-search-icon-512.png">
+  <meta property="og:image:alt" content="Bapela Digital Systems blue-and-black logo">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bapela Digital Systems | Lucky Malaka">
+  <meta name="twitter:description" content="Practical websites, ordering pages, and WhatsApp enquiry flows by Lucky Malaka.">
+  <meta name="twitter:image" content="https://bapeladigital.co.za/assets/bapela-search-icon-512.png">
+  <meta name="twitter:image:alt" content="Bapela Digital Systems blue-and-black logo">
   <link rel="canonical" href="https://bapeladigital.co.za/">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -166,32 +178,62 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://bapeladigital.co.za/#organization",
-  "name": "Bapela Digital Systems",
-  "description": "Bapela Digital Systems is a digital-services business owned and operated by Lucky Malaka.",
-  "url": "https://bapeladigital.co.za/",
-  "logo": "https://bapeladigital.co.za/assets/bapela-search-icon-512.png",
-  "founder": {
-    "@type": "Person",
-    "@id": "https://bapeladigital.co.za/about.html#lucky-malaka",
-    "name": "Lucky Malaka",
-    "url": "https://bapeladigital.co.za/about.html",
-    "sameAs": "https://github.com/beanboy908"
-  },
-  "sameAs": "https://github.com/beanboy908",
-  "workExample": [
+  "@graph": [
     {
-      "@type": "CreativeWork",
-      "name": "LiteBite Orders",
-      "url": "https://litebite.netlify.app/",
-      "description": "A campus food-ordering website with menu browsing, add-ons, and WhatsApp order handoff."
+      "@type": "Organization",
+      "@id": "https://bapeladigital.co.za/#organization",
+      "name": "Bapela Digital Systems",
+      "alternateName": "Bapela Digital",
+      "description": "Bapela Digital Systems is a digital-services business founded and operated by Lucky Malaka. It builds practical business websites, online ordering pages, and WhatsApp enquiry flows for South African businesses.",
+      "url": "https://bapeladigital.co.za/",
+      "logo": { "@id": "https://bapeladigital.co.za/#logo" },
+      "image": { "@id": "https://bapeladigital.co.za/#logo" },
+      "founder": { "@id": "https://bapeladigital.co.za/about.html#lucky-malaka" },
+      "telephone": "+27732221876",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "telephone": "+27732221876",
+        "url": "https://wa.me/27732221876"
+      },
+      "workExample": [
+        {
+          "@type": "CreativeWork",
+          "name": "LiteBite Orders",
+          "url": "https://litebite.netlify.app/",
+          "description": "A food-ordering website with menu browsing, add-ons, and WhatsApp order handoff."
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Yvonne Cleans",
+          "url": "https://yvonne-cleans.vercel.app/",
+          "description": "A cleaning-service website with clear service information and a WhatsApp enquiry path."
+        }
+      ]
     },
     {
-      "@type": "CreativeWork",
-      "name": "Yvonne Cleans",
-      "url": "https://yvonne-cleans.vercel.app/",
-      "description": "A cleaning-service website with clear service information and a WhatsApp enquiry path."
+      "@type": "ImageObject",
+      "@id": "https://bapeladigital.co.za/#logo",
+      "url": "https://bapeladigital.co.za/assets/bapela-search-icon-512.png",
+      "contentUrl": "https://bapeladigital.co.za/assets/bapela-search-icon-512.png",
+      "width": 512,
+      "height": 512,
+      "caption": "Bapela Digital Systems logo"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://bapeladigital.co.za/about.html#lucky-malaka",
+      "name": "Lucky Malaka",
+      "givenName": "Lucky",
+      "familyName": "Malaka",
+      "url": "https://bapeladigital.co.za/about.html",
+      "image": "https://bapeladigital.co.za/assets/lucky-malaka-circle.webp",
+      "jobTitle": "Founder",
+      "worksFor": { "@id": "https://bapeladigital.co.za/#organization" },
+      "sameAs": [
+        "https://github.com/beanboy908",
+        "https://github.com/nkadimengmaledimu-cmyk"
+      ]
     }
   ]
 }
@@ -215,7 +257,7 @@
   <div class="container">
     <div class="status-badge"><i class="fas fa-bolt"></i> Websites · Ordering · WhatsApp</div>
     <h1>Digital tools that help customers <span>take action</span>.</h1>
-    <p>Bapela Digital Systems builds practical business websites, online ordering pages, and WhatsApp enquiry flows for South African businesses.</p>
+    <p>Founded and operated by Lucky Malaka, Bapela Digital Systems builds practical business websites, online ordering pages, and WhatsApp enquiry flows for South African businesses.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn">Request a Quote <i class="fas fa-arrow-right"></i></a>
       <a href="#cases" class="btn btn-outline">See Real Projects</a>

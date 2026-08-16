@@ -40,4 +40,27 @@
 - [x] Inspect live Bapela search and metadata signals for Lucky Malaka ownership, current projects, and Legacy Shine references.
 - [x] Add truthful structured ownership and current-project metadata for Lucky Malaka, LiteBite, and Yvonne Cleans.
 - [x] Verify the published metadata and provide Search Console indexing steps for the homepage and About Lucky page.
+- [ ] Locate and verify the Legacy Shine source is controlled by Lucky before changing its attribution.
+- [ ] Replace the old Lucky @ Bapela attribution with an accurate Lucky Malaka and official Bapela Digital Systems reference.
+- [ ] Verify the updated live Legacy Shine attribution and prepare its Google re-indexing step.
+- [ ] Remove or disable the orphaned Legacy Shine Vercel deployment that still exposes outdated Bapela attribution.
+- [ ] Verify the Legacy Shine Vercel URL no longer serves the old Lucky @ Bapela Digital attribution.
+- [x] Rebuild Legacy Shine as a separate cleaning-services website using the verified business information from the existing live site.
+- [x] Publish a new Legacy Shine source repository with attribution to Lucky Malaka and the official Bapela Digital domain.
+- [ ] Verify the rebuilt source and guide replacement of the orphaned Vercel project deployment.
+- [x] Compare the live `legacyshineweb.vercel.app` reference with the rebuild and document the material differences.
+- [x] Revise the rebuilt Legacy Shine source to preserve the reference site’s verified identity, service structure, and presentation.
+- [ ] Verify the faithful replacement before reconnecting the existing Vercel deployment.
+- [ ] Inspect the existing Legacy Shine Vercel project and prepare the verified repository connection.
+- [ ] Connect the new Legacy Shine repository and deploy it to production only after final confirmation.
+- [ ] Verify `legacyshineweb.vercel.app` serves the corrected Legacy Shine build after deployment.
 - [x] Remove student, year, and university wording so the founder section presents Lucky Malaka only as Bapela Digital Systems founder.
+- [x] Compare the user-supplied original Legacy Shine source against the current repository build.
+- [x] Replace the repository markup with the original Legacy Shine layout while preserving the corrected Bapela attribution.
+- [x] Validate and publish the original-layout replacement to the Legacy Shine repository.
+- [x] Inspect LiteBite’s footer pattern and translate its polished hierarchy into the Legacy Shine brand.
+- [x] Replace the Legacy Shine footer with a LiteBite-inspired footer that retains correct business and attribution links.
+- [x] Validate and publish the redesigned Legacy Shine footer.
+- [x] Audit the live and repository Bapela metadata, JSON-LD, favicon, and founder-name signals.
+- [x] Strengthen truthful Organization and Person structured data for Lucky Malaka and Bapela Digital Systems.
+- [ ] Validate the updated markup and provide Google Search Console re-indexing guidance.
