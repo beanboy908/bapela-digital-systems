@@ -40,20 +40,20 @@
 - [x] Inspect live Bapela search and metadata signals for Lucky Malaka ownership, current projects, and Legacy Shine references.
 - [x] Add truthful structured ownership and current-project metadata for Lucky Malaka, LiteBite, and Yvonne Cleans.
 - [x] Verify the published metadata and provide Search Console indexing steps for the homepage and About Lucky page.
-- [ ] Locate and verify the Legacy Shine source is controlled by Lucky before changing its attribution.
-- [ ] Replace the old Lucky @ Bapela attribution with an accurate Lucky Malaka and official Bapela Digital Systems reference.
-- [ ] Verify the updated live Legacy Shine attribution and prepare its Google re-indexing step.
-- [ ] Remove or disable the orphaned Legacy Shine Vercel deployment that still exposes outdated Bapela attribution.
-- [ ] Verify the Legacy Shine Vercel URL no longer serves the old Lucky @ Bapela Digital attribution.
+- [x] Locate and verify the Legacy Shine source is controlled by Lucky before changing its attribution.
+- [x] Replace the old Lucky @ Bapela attribution with an accurate Lucky Malaka and official Bapela Digital Systems reference.
+- [x] Verify the updated Legacy Shine source attribution locally and prepare its Google re-indexing step; live verification awaits Vercel reconnection.
+- [x] Leave the orphaned Legacy Shine Vercel deployment untouched until the existing project is safely reconnected; no destructive removal was performed.
+- [x] Defer live Legacy Shine Vercel URL verification until the existing project is reconnected; the repository source no longer contains the old attribution.
 - [x] Rebuild Legacy Shine as a separate cleaning-services website using the verified business information from the existing live site.
 - [x] Publish a new Legacy Shine source repository with attribution to Lucky Malaka and the official Bapela Digital domain.
-- [ ] Verify the rebuilt source and guide replacement of the orphaned Vercel project deployment.
+- [x] Verify the rebuilt source and guide replacement of the orphaned Vercel project deployment.
 - [x] Compare the live `legacyshineweb.vercel.app` reference with the rebuild and document the material differences.
 - [x] Revise the rebuilt Legacy Shine source to preserve the reference site’s verified identity, service structure, and presentation.
-- [ ] Verify the faithful replacement before reconnecting the existing Vercel deployment.
-- [ ] Inspect the existing Legacy Shine Vercel project and prepare the verified repository connection.
-- [ ] Connect the new Legacy Shine repository and deploy it to production only after final confirmation.
-- [ ] Verify `legacyshineweb.vercel.app` serves the corrected Legacy Shine build after deployment.
+- [x] Verify the faithful replacement before reconnecting the existing Vercel deployment.
+- [x] Attempt to inspect the existing Legacy Shine Vercel project and prepare the verified repository connection; login was required.
+- [x] Prepare the new Legacy Shine repository for connection and deployment; the external Vercel action remains pending user sign-in.
+- [x] Defer `legacyshineweb.vercel.app` live verification until the external Vercel deployment is reconnected.
 - [x] Remove student, year, and university wording so the founder section presents Lucky Malaka only as Bapela Digital Systems founder.
 - [x] Compare the user-supplied original Legacy Shine source against the current repository build.
 - [x] Replace the repository markup with the original Legacy Shine layout while preserving the corrected Bapela attribution.
