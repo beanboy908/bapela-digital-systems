@@ -294,6 +294,7 @@
     <div class="hero-actions">
       <a href="#contact" class="btn">Request a Quote <i class="fas fa-arrow-right"></i></a>
       <a href="#cases" class="btn btn-outline">See Real Projects</a>
+      <button class="btn btn-outline" id="install-app" type="button" hidden>Install Bapela App <i class="fas fa-mobile-screen-button" aria-hidden="true"></i></button>
     </div>
   </div>
 </section>
@@ -590,6 +591,28 @@
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
       window.setTimeout(() => name?.focus({ preventScroll: true }), 450);
     });
+  });
+
+  const installAppButton = document.getElementById('install-app');
+  let installPrompt;
+
+  window.addEventListener('beforeinstallprompt', (event) => {
+    event.preventDefault();
+    installPrompt = event;
+    installAppButton.hidden = false;
+  });
+
+  installAppButton.addEventListener('click', async () => {
+    if (!installPrompt) return;
+    installPrompt.prompt();
+    await installPrompt.userChoice;
+    installPrompt = null;
+    installAppButton.hidden = true;
+  });
+
+  window.addEventListener('appinstalled', () => {
+    installPrompt = null;
+    installAppButton.hidden = true;
   });
 
   if ('serviceWorker' in navigator) {
