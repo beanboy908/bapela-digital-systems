@@ -122,12 +122,14 @@
     .plan-details summary { align-items: center; color: var(--brand-strong); cursor: pointer; display: flex; font-size: 0.86rem; font-weight: 800; justify-content: space-between; list-style: none; }
     .plan-details summary::-webkit-details-marker { display: none; }
     .plan-details summary i { transition: transform 0.2s ease; }
+    .plan-details[open] { background: #f8faff; border: 1px solid #cbd9f4; border-radius: 16px; padding: 1.15rem 1.25rem 1.3rem; }
+    .plan-details[open] summary { padding-bottom: 0.45rem; }
     .plan-details[open] summary i { transform: rotate(180deg); }
-    .inclusion-heading { color: var(--ink); font-family: 'Syne', sans-serif; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.08em; margin-top: 1.5rem; text-transform: uppercase; }
-    .check-list { list-style: none; margin-top: 0.65rem; }
-    .check-list li { margin-bottom: 0.8rem; font-size: 0.9rem; color: var(--sub); display: flex; align-items: flex-start; gap: 10px; }
+    .inclusion-heading { border-left: 3px solid var(--brand); color: var(--ink); font-family: 'Syne', sans-serif; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; line-height: 1.3; margin: 1.6rem 0 0.9rem; padding-left: 0.7rem; text-transform: uppercase; }
+    .plan-details .check-list { list-style: none; margin: 0 0 1.5rem; }
+    .check-list li { margin-bottom: 0.9rem; font-size: 0.9rem; color: var(--sub); display: flex; align-items: flex-start; gap: 10px; line-height: 1.55; }
     .check-list i { color: var(--brand); margin-top: 0.32rem; }
-    .plan-note { border-top: 1px solid var(--border); color: var(--sub); font-size: 0.78rem; margin-top: 1.2rem; padding-top: 1.1rem; }
+    .plan-note { border-top: 1px solid var(--border); color: var(--sub); font-size: 0.8rem; line-height: 1.6; margin-top: 0.4rem; padding-top: 1.2rem; }
     .pricing-scope-note { background: #ffffff; border: 1px solid #cbd9f4; border-radius: 16px; color: var(--sub); font-size: 0.9rem; line-height: 1.7; margin: 2.5rem auto 0; max-width: 900px; padding: 1.3rem 1.5rem; text-align: center; }
     .pricing-scope-note strong { color: var(--ink); }
 
