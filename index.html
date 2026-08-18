@@ -96,10 +96,13 @@
     .proof-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .proof-item { display: flex; gap: 0.75rem; align-items: center; color: var(--ink); font-size: 0.9rem; font-weight: 700; }
     .proof-item i { width: 2.1rem; height: 2.1rem; display: grid; place-items: center; border-radius: 50%; background: #e7efff; color: var(--brand-strong); }
-    .service-card { min-height: 100%; }
+    .service-card { display: flex; flex-direction: column; min-height: 100%; }
     .service-icon { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 14px; background: #e7efff; color: var(--brand-strong); font-size: 1.2rem; margin-bottom: 1.4rem; }
     .service-card h3 { font-family: 'Syne', sans-serif; font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--ink); }
     .service-card p { color: var(--sub); font-size: 0.94rem; }
+    .service-enquiry { color: var(--brand-strong); font-size: 0.88rem; font-weight: 800; margin-top: auto; padding-top: 1.4rem; text-decoration: none; }
+    .service-enquiry:hover, .service-enquiry:focus-visible { color: var(--brand); text-decoration: underline; }
+    .service-enquiry:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; }
     .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
     .step { position: relative; padding: 1.5rem; border-left: 2px solid #aac4f4; }
     .step-number { display: block; color: var(--brand); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 0.7rem; }
@@ -316,16 +319,19 @@
         <div class="service-icon"><i class="fas fa-window-maximize" aria-hidden="true"></i></div>
         <h3>Business websites</h3>
         <p>A clear online home for your services, contact details, business story, and the reasons customers should choose you.</p>
+        <a class="service-enquiry" href="#contact" data-service="a business website">Tell me about your website →</a>
       </article>
       <article class="card service-card">
         <div class="service-icon"><i class="fas fa-bag-shopping" aria-hidden="true"></i></div>
         <h3>Online ordering</h3>
         <p>Simple menus and product pages that help customers browse options, choose extras, and send an order through WhatsApp.</p>
+        <a class="service-enquiry" href="#contact" data-service="an ordering experience">Plan your ordering journey →</a>
       </article>
       <article class="card service-card">
         <div class="service-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
         <h3>Bookings &amp; enquiries</h3>
         <p>Focused contact flows for customers who need to request a quote, book a service, or start a conversation quickly.</p>
+        <a class="service-enquiry" href="#contact" data-service="a booking or enquiry flow">Improve your customer journey →</a>
       </article>
     </div>
   </div>
@@ -569,6 +575,22 @@
   primaryMenu.addEventListener('click', closeMenu);
   document.addEventListener('click', (event) => { if (!event.target.closest('.menu-wrap')) closeMenu(); });
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
+
+  document.querySelectorAll('.service-enquiry').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const service = link.dataset.service;
+      const message = document.getElementById('msg');
+      const name = document.getElementById('name');
+
+      if (service && message && !message.value.trim()) {
+        message.value = `I'm interested in ${service}. Please tell me the best way to get started.`;
+      }
+
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.setTimeout(() => name?.focus({ preventScroll: true }), 450);
+    });
+  });
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
