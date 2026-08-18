@@ -1,6 +1,8 @@
 {
+  "id": "/",
   "name": "Bapela Digital Systems",
   "short_name": "Bapela Digital",
+  "description": "Practical websites, ordering pages, and WhatsApp enquiry flows for South African businesses.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
