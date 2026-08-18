@@ -118,6 +118,11 @@
     .price span { font-size: 1rem; color: var(--sub); }
     #pricing .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
     .price-card-intro { color: var(--sub); font-size: 0.92rem; min-height: 3rem; }
+    .plan-details { border-top: 1px solid var(--border); margin-top: 1.35rem; padding-top: 1rem; }
+    .plan-details summary { align-items: center; color: var(--brand-strong); cursor: pointer; display: flex; font-size: 0.86rem; font-weight: 800; justify-content: space-between; list-style: none; }
+    .plan-details summary::-webkit-details-marker { display: none; }
+    .plan-details summary i { transition: transform 0.2s ease; }
+    .plan-details[open] summary i { transform: rotate(180deg); }
     .inclusion-heading { color: var(--ink); font-family: 'Syne', sans-serif; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.08em; margin-top: 1.5rem; text-transform: uppercase; }
     .check-list { list-style: none; margin-top: 0.65rem; }
     .check-list li { margin-bottom: 0.8rem; font-size: 0.9rem; color: var(--sub); display: flex; align-items: flex-start; gap: 10px; }
@@ -156,7 +161,7 @@
       .hero h1 { font-size: 2.2rem; }
       .hero p { font-size: 1rem; }
 
-      .grid, #cases .grid { grid-template-columns: 1fr; } /* Force cards to stack */
+      .grid, #cases .grid, #pricing .grid { grid-template-columns: 1fr; } /* Force cards to stack */
       .proof-bar, .process-grid { grid-template-columns: 1fr; }
       .proof-item { justify-content: center; }
       
@@ -401,7 +406,9 @@
         <h4>STARTER</h4>
         <div class="price">R200 <span>/ month</span></div>
         <p class="price-card-intro">For a simple business site that needs to stay online, secure, and easy for customers to contact.</p>
-        <p class="inclusion-heading">Included features</p>
+        <details class="plan-details">
+          <summary>View full plan details <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
+          <p class="inclusion-heading">Included features</p>
         <ul class="check-list">
           <li><i class="fas fa-check"></i> Management of one existing landing page</li>
           <li><i class="fas fa-check"></i> Working WhatsApp, call, email, and social links</li>
@@ -413,13 +420,16 @@
           <li><i class="fas fa-check"></i> SSL and basic hosting health check</li>
           <li><i class="fas fa-check"></i> Support for straightforward website questions</li>
         </ul>
-        <p class="plan-note">Best for an established one-page site. New pages, redesigns, and new functionality are quoted separately.</p>
+          <p class="plan-note">Best for an established one-page site. New pages, redesigns, and new functionality are quoted separately.</p>
+        </details>
       </article>
       <article class="card" style="border-color: var(--brand); transform: scale(1.05);">
         <h4>BUSINESS</h4>
         <div class="price">R450 <span>/ month</span></div>
         <p class="price-card-intro">For businesses that need a stronger online presence and regular small improvements.</p>
-        <p class="inclusion-heading">Included features</p>
+        <details class="plan-details">
+          <summary>View full plan details <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
+          <p class="inclusion-heading">Included features</p>
         <ul class="check-list">
           <li><i class="fas fa-check"></i> Management of an existing website with up to five core pages</li>
           <li><i class="fas fa-check"></i> WhatsApp enquiries, contact form, Google Maps, and social links</li>
@@ -431,13 +441,16 @@
           <li><i class="fas fa-check"></i> Up to two small content updates each month</li>
           <li><i class="fas fa-check"></i> Hosting, SSL, and routine site health review</li>
         </ul>
-        <p class="plan-note">Ideal for a service business. New pages, new branding, and campaigns are scoped and quoted before work starts.</p>
+          <p class="plan-note">Ideal for a service business. New pages, new branding, and campaigns are scoped and quoted before work starts.</p>
+        </details>
       </article>
       <article class="card">
         <h4>GROWTH</h4>
         <div class="price">R800 <span>/ month</span></div>
         <p class="price-card-intro">For businesses using their website to generate bookings, orders, or consistent customer enquiries.</p>
-        <p class="inclusion-heading">Included features</p>
+        <details class="plan-details">
+          <summary>View full plan details <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
+          <p class="inclusion-heading">Included features</p>
         <ul class="check-list">
           <li><i class="fas fa-check"></i> Management of an existing booking, order, or enquiry journey</li>
           <li><i class="fas fa-check"></i> Guidance for an existing professional email, booking, or ordering tool</li>
@@ -449,13 +462,16 @@
           <li><i class="fas fa-check"></i> Up to four small content updates each month</li>
           <li><i class="fas fa-check"></i> One agreed small conversion or usability improvement per month</li>
         </ul>
-        <p class="plan-note">Third-party subscriptions, payment fees, and major booking or ordering changes are not included unless agreed in writing.</p>
+          <p class="plan-note">Third-party subscriptions, payment fees, and major booking or ordering changes are not included unless agreed in writing.</p>
+        </details>
       </article>
       <article class="card">
         <h4>PRO SYSTEMS</h4>
         <div class="price">R1,500 <span>/ month</span></div>
         <p class="price-card-intro">For businesses that need ongoing help with more advanced systems, automation, and customer workflows.</p>
-        <p class="inclusion-heading">Included features</p>
+        <details class="plan-details">
+          <summary>View full plan details <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
+          <p class="inclusion-heading">Included features</p>
         <ul class="check-list">
           <li><i class="fas fa-check"></i> Monitoring of agreed website, booking, order, or automation workflows</li>
           <li><i class="fas fa-check"></i> Support for connected forms, customer data flows, and operational journeys</li>
@@ -467,7 +483,8 @@
           <li><i class="fas fa-check"></i> Regular website health, link, form, and workflow checks</li>
           <li><i class="fas fa-check"></i> One agreed small system or process improvement each month</li>
         </ul>
-        <p class="plan-note">Major new modules, integrations, redesigns, and custom development are planned and quoted separately before implementation.</p>
+          <p class="plan-note">Major new modules, integrations, redesigns, and custom development are planned and quoted separately before implementation.</p>
+        </details>
       </article>
     </div>
     <p class="pricing-scope-note"><strong>Please note:</strong> monthly plans cover ongoing care after the initial website or system build. Once-off setup, design, new pages, major custom features, paid tools, domain renewals, email licences, payment fees, and advertising budgets are discussed upfront and only added with your approval.</p>
