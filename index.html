@@ -144,6 +144,8 @@
     .form-wrap { background: var(--card); padding: 3rem; border-radius: var(--radius); border: 1px solid var(--border); max-width: 600px; margin: 0 auto; }
     input, select, textarea { width: 100%; background: #f8faff; border: 1px solid #cbd7ed; padding: 1rem; border-radius: 12px; color: var(--text); margin-bottom: 1rem; font-family: inherit; }
     .contact-intro { max-width: 600px; text-align: center; color: var(--sub); margin: -0.75rem auto 2rem; }
+    .contact-error { background: #fff0ed; border: 1px solid #f1b8ac; border-radius: 12px; color: #8a2c1e; font-size: 0.88rem; line-height: 1.45; margin: 0 0 1rem; padding: 0.8rem 1rem; }
+    input[aria-invalid="true"] { border-color: #c74632; box-shadow: 0 0 0 3px rgba(199, 70, 50, 0.12); }
     .contact-meta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; color: var(--sub); font-size: 0.82rem; margin-top: 1.25rem; }
     .contact-meta a { color: var(--brand-strong); font-weight: 800; text-decoration: none; }
 
@@ -525,8 +527,9 @@
     <div class="form-wrap">
       <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Syne';">Start Your Project</h2>
       <p class="contact-intro">Tell me what your business does and what you want customers to be able to do online. Your message opens WhatsApp so we can discuss the right approach before a quote is prepared.</p>
-      <input type="text" id="name" placeholder="Business Name">
-      <input type="tel" id="phone" placeholder="WhatsApp Number">
+      <p class="contact-error" id="contact-error" role="alert" hidden>Please add your business name and WhatsApp number before starting the conversation.</p>
+      <input type="text" id="name" placeholder="Business Name" aria-label="Business name" aria-describedby="contact-error">
+      <input type="tel" id="phone" placeholder="WhatsApp Number" aria-label="WhatsApp number" aria-describedby="contact-error">
       <select id="package">
         <option>Starter — R200/month</option>
         <option>Business — R450/month</option>
@@ -558,8 +561,21 @@
     const phone = document.getElementById('phone').value;
     const pkg = document.getElementById('package').value;
     const msg = document.getElementById('msg').value;
+    const contactError = document.getElementById('contact-error');
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
 
-    if(!name || !phone) return alert('Please provide your name and number.');
+    if(!name || !phone) {
+      contactError.hidden = false;
+      nameInput.setAttribute('aria-invalid', String(!name));
+      phoneInput.setAttribute('aria-invalid', String(!phone));
+      (!name ? nameInput : phoneInput).focus();
+      return;
+    }
+
+    contactError.hidden = true;
+    nameInput.removeAttribute('aria-invalid');
+    phoneInput.removeAttribute('aria-invalid');
 
     const text = `New Bapela Digital Inquiry\n\nBusiness: ${name}\nWhatsApp: ${phone}\nPackage: ${pkg}\nMessage: ${msg}`;
     window.open(`https://wa.me/27732221876?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
