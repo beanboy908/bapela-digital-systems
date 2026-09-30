@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Name check | Bapela Digital</title>
+  <meta name="description" content="Check each name and confirm that it is spelled correctly.">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/bapela-search-icon-48.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#16232d; --muted:#63727c; --paper:#f4f7f5; --card:#fff; --line:#d9e3df; --teal:#0c746b; --teal-dark:#07564f; --mint:#dff3ed; --gold:#f3b85b; --shadow:0 20px 50px rgba(18,53,49,.10); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Manrope,system-ui,sans-serif; line-height:1.5; }
+    .shell { width:min(1120px, calc(100% - 32px)); margin:0 auto; }
+    header { padding:26px 0 0; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .brand { color:var(--ink); font-size:.86rem; font-weight:800; letter-spacing:.14em; text-decoration:none; text-transform:uppercase; }
+    .brand span { color:var(--teal); }
+    .back { color:var(--muted); font-size:.82rem; font-weight:700; text-decoration:none; }
+    .back:hover { color:var(--teal); }
+    main { padding:76px 0 90px; }
+    .intro { display:grid; grid-template-columns:1.15fr .85fr; gap:55px; align-items:end; margin-bottom:42px; }
+    .eyebrow { color:var(--teal); font-family:'DM Mono',monospace; font-size:.73rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { max-width:680px; margin:15px 0 18px; font-size:clamp(2.5rem, 6vw, 5.2rem); letter-spacing:-.075em; line-height:.98; }
+    .lead { max-width:600px; margin:0; color:var(--muted); font-size:1.05rem; }
+    .instructions { border-left:3px solid var(--gold); padding:4px 0 4px 22px; color:var(--muted); font-size:.9rem; }
+    .instructions strong { display:block; color:var(--ink); margin-bottom:6px; }
+    .panel { background:var(--card); border:1px solid var(--line); border-radius:28px; box-shadow:var(--shadow); overflow:hidden; }
+    .panel-head { display:flex; justify-content:space-between; align-items:center; gap:18px; padding:22px 24px; border-bottom:1px solid var(--line); }
+    .count { color:var(--muted); font-family:'DM Mono',monospace; font-size:.8rem; }
+    .count strong { color:var(--teal); }
+    .progress { flex:1; max-width:360px; height:9px; background:#e8efec; border-radius:99px; overflow:hidden; }
+    .progress-bar { width:0; height:100%; background:var(--teal); border-radius:inherit; transition:width .25s ease; }
+    .toolbar { display:flex; flex-wrap:wrap; gap:10px; padding:18px 24px; background:#fbfdfc; border-bottom:1px solid var(--line); }
+    .search-wrap { position:relative; flex:1 1 250px; }
+    .search-wrap svg { position:absolute; left:13px; top:13px; width:17px; color:var(--muted); }
+    input[type=search] { width:100%; height:44px; padding:0 15px 0 39px; border:1px solid var(--line); border-radius:12px; background:#fff; color:var(--ink); font:inherit; outline:none; }
+    input[type=search]:focus { border-color:var(--teal); box-shadow:0 0 0 3px rgba(12,116,107,.12); }
+    button { border:0; border-radius:11px; padding:0 15px; min-height:44px; background:var(--mint); color:var(--teal-dark); cursor:pointer; font:700 .8rem Manrope,sans-serif; }
+    button:hover { filter:brightness(.97); transform:translateY(-1px); }
+    .btn-dark { background:var(--teal); color:#fff; }
+    .btn-quiet { background:#fff; border:1px solid var(--line); color:var(--muted); }
+    .list { display:grid; grid-template-columns:repeat(2,1fr); }
+    .person { display:flex; align-items:center; gap:15px; min-height:76px; padding:15px 24px; border-bottom:1px solid var(--line); transition:background .15s ease; }
+    .person:nth-child(odd) { border-right:1px solid var(--line); }
+    .person:hover { background:#fbfefd; }
+    .person.is-checked { background:#f0faf6; }
+    .person label { display:flex; align-items:center; gap:15px; width:100%; cursor:pointer; }
+    .person input[type=checkbox] { appearance:none; flex:0 0 auto; width:23px; height:23px; margin:0; border:2px solid #b8cbc5; border-radius:7px; background:white; position:relative; }
+    .person input[type=checkbox]:checked { border-color:var(--teal); background:var(--teal); }
+    .person input[type=checkbox]:checked::after { content:'✓'; position:absolute; left:4px; top:-2px; color:#fff; font-size:16px; font-weight:800; }
+    .person input[type=checkbox]:focus-visible { outline:3px solid rgba(12,116,107,.25); outline-offset:2px; }
+    .number { color:#99aaa4; font:500 .7rem 'DM Mono',monospace; min-width:24px; }
+    .name { font-size:.96rem; font-weight:700; letter-spacing:-.02em; }
+    .person.is-checked .name { color:var(--teal-dark); }
+    .empty { display:none; padding:46px 24px; color:var(--muted); text-align:center; grid-column:1/-1; }
+    .empty.is-visible { display:block; }
+    .footer-actions { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:22px 24px; background:#fbfdfc; }
+    .status { color:var(--muted); font-size:.8rem; }
+    .actions { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .toast { position:fixed; left:50%; bottom:24px; z-index:5; max-width:calc(100% - 32px); padding:12px 17px; border-radius:99px; background:var(--ink); color:#fff; box-shadow:0 12px 28px rgba(0,0,0,.18); font-size:.82rem; opacity:0; transform:translate(-50%,15px); pointer-events:none; transition:opacity .2s, transform .2s; }
+    .toast.show { opacity:1; transform:translate(-50%,0); }
+    @media (max-width:760px) { .intro { grid-template-columns:1fr; gap:24px; margin-bottom:30px; } main { padding-top:52px; } .list { grid-template-columns:1fr; } .person:nth-child(odd) { border-right:0; } .panel-head { align-items:flex-start; flex-direction:column; } .progress { width:100%; max-width:none; order:2; } .footer-actions { align-items:flex-start; flex-direction:column; } .actions { justify-content:flex-start; } }
+    @media print { body { background:#fff; } header, .toolbar, .footer-actions, .instructions { display:none; } main { padding:20px 0; } .intro { display:block; margin-bottom:20px; } .panel { box-shadow:none; border-color:#aaa; } .list { grid-template-columns:repeat(2,1fr); } .person { min-height:42px; padding:7px 12px; } .person:nth-child(odd) { border-right:1px solid #ddd; } h1 { font-size:2.5rem; } }
+  </style>
+</head>
+<body>
+  <header class="shell">
+    <div class="topbar"><a class="brand" href="index.html">Bapela <span>Digital</span></a><a class="back" href="index.html">Back to website ↗</a></div>
+  </header>
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div><div class="eyebrow">Name confirmation · 48 entries</div><h1 id="page-title">Is your name written correctly?</h1><p class="lead">Find your name below and tick the box only when the spelling is correct. If anything needs changing, leave it unticked.</p></div>
+      <div class="instructions"><strong>How to use this page</strong>Search your name, review every letter, and tick the matching row. Your progress is saved on this device.</div>
+    </section>
+    <section class="panel" aria-label="Name confirmation list">
+      <div class="panel-head"><div class="count"><strong id="checked-count">0</strong> of <span id="total-count">48</span> confirmed</div><div class="progress" aria-label="Confirmation progress"><div class="progress-bar" id="progress-bar"></div></div></div>
+      <div class="toolbar"><div class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input id="search" type="search" placeholder="Search for your name…" autocomplete="off" aria-label="Search names"></div><button type="button" id="check-all">Tick visible</button><button type="button" class="btn-quiet" id="clear-all">Clear ticks</button></div>
+      <div class="list" id="name-list"></div>
+      <div class="empty" id="empty-state">No names match your search. Try a different spelling or clear the search.</div>
+      <div class="footer-actions"><div class="status" id="status" aria-live="polite">No names confirmed yet.</div><div class="actions"><button type="button" class="btn-quiet" id="print">Print list</button><button type="button" class="btn-dark" id="copy">Copy confirmed names</button></div></div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    const names = [
+      'Reaoleboga Ramatlhape','Makaluza Nomalizo','Thabethe','Ludidi Thumtha','Vaphi Musa','Murulane Uhone','Matlou Thapelo','Gigi Kuhle','Thabethe Amaza','Moashetsi Boitumelo','Mukhari Clifford','Mahlathini Sinesipho','Tofile Songeziwe','Phiri Refilwe','Gunuza Simamkele','Shondlani Siphokazi','Ngenu Ayabonga','Sgelem Sigqibo','Sitshetshe Akhona','Mbedzi Dzithendo','Nokukhanya Mahlangu','Shakira Chetty','Buhlebekhaya Mjo','Lucky Gomotso Malaka','Anelisiwe Breakfast','Sange Gama','Mawande Hlebo','Kungawo Ceba','Mnqobi Nala','Refiloe Mokoena','Thumtha Mijelo Qhama Ludidi','Imange Sibalekile','Lerato Rosetta Kebaone','Anako Mvinjelwa','Lutendo Ramulongo','Bannye Lentsoe','Asake Papu','Vuyo Mathula','Retshepile Mmalo','Yibanathi Bumka','Slindo Gumede','Asanda Ngquphaza','Ovayo Gwele','Amahle Bhengu','Masonele Ntsindo','Yolanda Njomi','Ayabonga Mavundla','Nthabiseng Tshabalala'
+    ];
+    const key = 'bapela-name-confirmations-v1';
+    const list = document.getElementById('name-list');
+    const search = document.getElementById('search');
+    const empty = document.getElementById('empty-state');
+    const toast = document.getElementById('toast');
+    let saved = JSON.parse(localStorage.getItem(key) || '{}');
+
+    function render() {
+      const query = search.value.trim().toLowerCase();
+      list.innerHTML = names.map((name, index) => {
+        if (query && !name.toLowerCase().includes(query)) return '';
+        const checked = Boolean(saved[index]);
+        return `<div class="person ${checked ? 'is-checked' : ''}"><label><input type="checkbox" data-index="${index}" ${checked ? 'checked' : ''}><span class="number">${String(index + 1).padStart(2, '0')}</span><span class="name">${name}</span></label></div>`;
+      }).join('');
+      const visible = [...list.children];
+      empty.classList.toggle('is-visible', visible.length === 0);
+      list.querySelectorAll('input').forEach(input => input.addEventListener('change', (event) => {
+        saved[event.target.dataset.index] = event.target.checked;
+        if (!event.target.checked) delete saved[event.target.dataset.index];
+        persist(); render();
+      }));
+      updateProgress();
+    }
+    function persist() { localStorage.setItem(key, JSON.stringify(saved)); }
+    function updateProgress() {
+      const total = Object.keys(saved).length;
+      document.getElementById('checked-count').textContent = total;
+      document.getElementById('total-count').textContent = names.length;
+      document.getElementById('progress-bar').style.width = `${(total / names.length) * 100}%`;
+      document.getElementById('status').textContent = total === 0 ? 'No names confirmed yet.' : total === names.length ? 'All names confirmed.' : `${total} name${total === 1 ? '' : 's'} confirmed. Keep going.`;
+    }
+    function showToast(message) { toast.textContent = message; toast.classList.add('show'); clearTimeout(showToast.timer); showToast.timer = setTimeout(() => toast.classList.remove('show'), 2400); }
+    document.getElementById('search').addEventListener('input', render);
+    document.getElementById('check-all').addEventListener('click', () => { [...list.querySelectorAll('input')].forEach(input => { saved[input.dataset.index] = true; }); persist(); render(); showToast('Visible names ticked'); });
+    document.getElementById('clear-all').addEventListener('click', () => { saved = {}; persist(); render(); showToast('All ticks cleared'); });
+    document.getElementById('print').addEventListener('click', () => window.print());
+    document.getElementById('copy').addEventListener('click', async () => { const confirmed = names.filter((_, index) => saved[index]); if (!confirmed.length) { showToast('Tick at least one name first'); return; } try { await navigator.clipboard.writeText(confirmed.join('\n')); showToast(`${confirmed.length} confirmed name${confirmed.length === 1 ? '' : 's'} copied`); } catch { showToast('Copy is not available in this browser'); } });
+    render();
+  </script>
+</body>
+</html>
