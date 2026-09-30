@@ -74,7 +74,7 @@
   <main class="shell">
     <section class="intro" aria-labelledby="page-title">
       <div><div class="eyebrow">Name confirmation · 48 entries</div><h1 id="page-title">Is your name written correctly?</h1><p class="lead">Find your name below and tick the box only when the spelling is correct. If anything needs changing, leave it unticked.</p></div>
-      <div class="instructions"><strong>How to use this page</strong>Search your name, review every letter, and tick the matching row. Your progress is saved on this device.</div>
+      <div class="instructions"><strong>How to use this page</strong>Search your name, review every letter, and tick the matching row. When finished, tap “Copy confirmed names” and send the result to your tutor.</div>
     </section>
     <section class="panel" aria-label="Name confirmation list">
       <div class="panel-head"><div class="count"><strong id="checked-count">0</strong> of <span id="total-count">48</span> confirmed</div><div class="progress" aria-label="Confirmation progress"><div class="progress-bar" id="progress-bar"></div></div></div>
@@ -94,7 +94,16 @@
     const search = document.getElementById('search');
     const empty = document.getElementById('empty-state');
     const toast = document.getElementById('toast');
-    let saved = JSON.parse(localStorage.getItem(key) || '{}');
+    function loadSaved() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(key) || '{}');
+        if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {};
+        return Object.fromEntries(Object.entries(parsed).filter(([index, value]) => /^\d+$/.test(index) && Number(index) < names.length && value === true));
+      } catch {
+        return {};
+      }
+    }
+    let saved = loadSaved();
 
     function render() {
       const query = search.value.trim().toLowerCase();
@@ -112,7 +121,9 @@
       }));
       updateProgress();
     }
-    function persist() { localStorage.setItem(key, JSON.stringify(saved)); }
+    function persist() {
+      try { localStorage.setItem(key, JSON.stringify(saved)); } catch { showToast('Progress could not be saved on this device'); }
+    }
     function updateProgress() {
       const total = Object.keys(saved).length;
       document.getElementById('checked-count').textContent = total;
