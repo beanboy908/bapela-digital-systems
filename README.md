@@ -69,3 +69,7 @@ Bapela projects are built around clear user journeys, responsive layouts, mainta
 - [Bapela Digital Systems](https://bapeladigital.co.za)
 - [LiteBite Fast Food](https://litebite.netlify.app/)
 - [GitHub profile](https://github.com/beanboy908)
+## New client experience: Blink & Blush by Theo
+
+[Blink & Blush by Theo ](projects/blink-and-blush/) is a flyer-led, mobile-first cluster-lash booking website for Solomon Mahlangu Annex. It keeps the customer journey deliberately short: choose BYO lashes (R50) or My lashes (R80), add a preferred time, and continue straight to a pre-filled WhatsApp message for Theo. The footer links the client experience back to Bapela Digital Systems.
+
